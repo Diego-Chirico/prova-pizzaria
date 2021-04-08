@@ -11,22 +11,34 @@ const tipoBorda = [
     { borda: "cheddar", valorBorda: 5.00 },
     { borda: "sem borda", valorBorda: 0.00 }
 ]
-const saborPizza = [
-    { sabor: "calabresa", ingredientes: "mussarela, cebola e calabresa" },
-    { sabor: "4 queijos", ingredientes: "mussarela, cheddar, parmesão e prato" },
-    { sabor: "frango com catupiry", ingredientes: "mussarela, frango e catupiry" },
-    { sabor: "portuguesa", ingredientes: "mussarela, pimentão, cebola, presunto e ovo" },
-    { sabor: "camarão", ingredientes: "mussarela, camarão, salsinha e cebolinha" },
-    { sabor: "carne seca", ingredientes: "mussarela, carne seca e cream cheese" },
-    { sabor: "lombo canadense", ingredientes: " mussarela, lombo canadense, tomate, orégano e cebola" },
-    { sabor: "X- fritas", ingredientes: "mussarela, contra-filé, presunto, bacon, ovo, tomate, cebola e batata frita " }
+const saborPizza1 = [
+    { sabor1: "calabresa", ingredientes: "mussarela, cebola e calabresa" },
+    { sabor1: "4 queijos", ingredientes: "mussarela, cheddar, parmesão e prato" },
+    { sabor1: "frango com catupiry", ingredientes: "mussarela, frango e catupiry" },
+    { sabor1: "portuguesa", ingredientes: "mussarela, pimentão, cebola, presunto e ovo" },
+    { sabor1: "camarão", ingredientes: "mussarela, camarão, salsinha e cebolinha" },
+    { sabor1: "carne seca", ingredientes: "mussarela, carne seca e cream cheese" },
+    { sabor1: "lombo canadense", ingredientes: " mussarela, lombo canadense, tomate, orégano e cebola" },
+    { sabor1: "X- fritas", ingredientes: "mussarela, contra-filé, presunto, bacon, ovo, tomate, cebola e batata frita " }
 ]
+const saborPizza2 = [
+    { sabor2: "calabresa", ingredientes: "mussarela, cebola e calabresa" },
+    { sabor2: "4 queijos", ingredientes: "mussarela, cheddar, parmesão e prato" },
+    { sabor2: "frango com catupiry", ingredientes: "mussarela, frango e catupiry" },
+    { sabor2: "portuguesa", ingredientes: "mussarela, pimentão, cebola, presunto e ovo" },
+    { sabor2: "camarão", ingredientes: "mussarela, camarão, salsinha e cebolinha" },
+    { sabor2: "carne seca", ingredientes: "mussarela, carne seca e cream cheese" },
+    { sabor2: "lombo canadense", ingredientes: " mussarela, lombo canadense, tomate, orégano e cebola" },
+    { sabor2: "X- fritas", ingredientes: "mussarela, contra-filé, presunto, bacon, ovo, tomate, cebola e batata frita " }
+]
+
 const bebida = [
     { tipoBebida: "Coca-Cola", valorBebida: 12.00 },
     { tipoBebida: "Fanta", valorBebida: 10.00 },
     { tipoBebida: "Guaraná Antarctica", valorBebida: 10.00 },
     { tipoBebida: "H2O", valorBebida: 8.00 },
-    { tipoBebida: "Del Valle", valorBebida: 7.00 }
+    { tipoBebida: "Del Valle", valorBebida: 7.00 },
+    { tipoBebida: "Nenhuma", valorBebida: 0.00 }
 ]
 const tipoEntrega = [
     { entrega: "retirada no balcão", valorEntrega: 0.00 },
@@ -54,7 +66,7 @@ function meuPedido() {
 
     saberTamanhoPizza()
 
-    saberTipoSabor()
+    saberTipoSabor1()
 
     saberTipoBorda()
 
@@ -78,11 +90,11 @@ function saberTamanhoPizza() {
         }
     }
 }
-function saberTipoSabor() {
-    let saborDaPizza = document.getElementById(`saboresPizzas`).value
-    for (posicao in saborPizza) {
-        if (saborDaPizza == saborPizza[posicao].sabor) {
-            Object.assign(pedido, saborPizza[posicao])
+function saberTipoSabor1() {
+    let saborDaPizza1 = document.getElementById(`saboresPizzas1`).value
+    for (posicao in saborPizza1) {
+        if (saborDaPizza1 == saborPizza1[posicao].sabor1) {
+            Object.assign(pedido, saborPizza1[posicao])
             console.log(pedido)
         }
     }
@@ -136,7 +148,7 @@ function calcular() {
         `   
         <p>Confira abaixo as informações do seu pedido: </p>
         <p>Tamanho:  ${pedido.tipoTamanho} </p>
-        <p>Sabor:  ${pedido.sabor} </p>
+        <p>Sabor:  ${pedido.sabor1} </p>
         <p>Borda:  ${pedido.borda} </p>
         <p>Bebida: ${pedido.tipoBebida} </p>
         <p>Tipo de entrega: ${pedido.entrega} </p>
