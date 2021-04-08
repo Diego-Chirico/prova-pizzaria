@@ -43,7 +43,7 @@ const formaPagamento = [
 let pedido = {};
 
 function chamarPagina1() {
-    document.getElementById('pagina1').style.display = "block"
+    document.getElementById('pagina1').style.display = "flex"
 }
 
 function meuPedido() {

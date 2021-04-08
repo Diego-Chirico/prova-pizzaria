@@ -40,6 +40,7 @@ select {
     background-position: 218px center;
     width: 150px;
     height:30px;
+    border-radius: 3px;
 }
 
 select option {
@@ -50,17 +51,29 @@ select option {
 /* pagina 1 */
 
 #pagina1 {
-    display: none;
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 50%;
+    align-items: center;
+    height: 500px;
 }
 
+.itensPizza {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 50%;
+    flex-direction: column;
+    text-align: center;
+}
 /* pagina 2 */
 
-#pagina1 {
+#pagina2 {
     display: none;
 }
 
 /* pagina 3 */
 
-#pagina1 {
+#pagina3 {
     display: none;
 }
