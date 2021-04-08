@@ -68,6 +68,8 @@ function meuPedido() {
 
     saberTipoSabor1()
 
+    saberTipoSabor2()   
+
     saberTipoBorda()
 
     saberTipoBebida()
@@ -95,6 +97,15 @@ function saberTipoSabor1() {
     for (posicao in saborPizza1) {
         if (saborDaPizza1 == saborPizza1[posicao].sabor1) {
             Object.assign(pedido, saborPizza1[posicao])
+            console.log(pedido)
+        }
+    }
+}
+function saberTipoSabor2() {
+    let saborDaPizza2 = document.getElementById(`saboresPizzas2`).value
+    for (posicao in saborPizza2) {
+        if (saborDaPizza2 == saborPizza2[posicao].sabor2) {
+            Object.assign(pedido, saborPizza2[posicao])
             console.log(pedido)
         }
     }
@@ -134,6 +145,8 @@ function saberTipoPagamento() {
             console.log(pedido)
         }
     }
+    
+
 }
 
 function calcular() {
@@ -148,7 +161,8 @@ function calcular() {
         `   
         <p>Confira abaixo as informações do seu pedido: </p>
         <p>Tamanho:  ${pedido.tipoTamanho} </p>
-        <p>Sabor:  ${pedido.sabor1} </p>
+        <p>Sabor1:  ${pedido.sabor1} </p>
+        <p>Sabor2:  ${pedido.sabor2} </p>
         <p>Borda:  ${pedido.borda} </p>
         <p>Bebida: ${pedido.tipoBebida} </p>
         <p>Tipo de entrega: ${pedido.entrega} </p>
@@ -174,9 +188,17 @@ function nao() {
 
 function sim() {
 
+     troco()
 }
 
+function troco() {
 
+    if(pedido.tipoPagamento == "dinheiro" ){
+
+        
+    }
+
+}
 
 function enviar() {
 
