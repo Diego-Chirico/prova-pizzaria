@@ -110,7 +110,7 @@ const formaPagamento = [
 ]
 
 
-let carrinho = []
+let carrinho = {};
 
 let tamanho = document.getElementById("tamanho")
 
@@ -132,11 +132,13 @@ function meuPedido() {
 
     saberTipoPagamento()
 
+    esconder()
+
+    calcular()
+
+
     console.log(carrinho)
 }
-
-
-
 
 
 function saberTamanhoPizza() {
@@ -225,5 +227,53 @@ function saberTipoPagamento() {
 }
 
 function esconder(){
-    
+
+    let todos = document.getElementsByClassName('escondido')
+
+    for( i = 0; i < todos.length; i++){
+        todos[i].style.display = 'none';
+    }
+
+    let botaoConfirmacao = document.getElementsByClassName('confirmacao')
+
+    for( i = 0; i < botaoConfirmacao.length; i++){
+        botaoConfirmacao[i].style.display = 'block';
+    }
+}
+
+function sim() {
+
+}
+
+function nao() {
+
+    let todos = document.getElementsByClassName('escondido')
+
+    for( i = 0; i < todos.length; i++){
+        todos[i].style.display = 'block';
+    }
+
+    let botaoConfirmacao = document.getElementsByClassName('confirmacao')
+
+    for( i = 0; i < botaoConfirmacao.length; i++){
+        botaoConfirmacao[i].style.display = 'none';
+    }
+}
+
+
+function calcular( ){
+
+    let pedido = document.getElementById('informacoesPedido')
+
+    let valorTotal = carrinho.valorTamanho + carrinho.valorBorda + carrinho.valorBebida + carrinho.valorEntrega
+
+    pedido.innerHTML = 
+    `
+        Tamanho ${carrinho.tipoTamanho} <br>
+        O sabor da sua pizza é ${carrinho.sabor} <br>
+        O valor total do seu pedido é igual à: ${valorTotal}
+       
+     `
+
+
 }
