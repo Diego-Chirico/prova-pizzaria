@@ -117,16 +117,12 @@ const formaDePagamento = ["Dinheiro", "Cartão (crédito ou débito)", "Pix", "P
 
 
 
+
+
 function meuPedido() {
+   
 
     console.log("oi")
 
 }
 
-function meuPedido() {
-
-
-
-    console.log("oi")
-
-}
