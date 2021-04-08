@@ -24,15 +24,8 @@ const tipoBorda = [
     { borda: "gorgonzola", valorBorda: 10.00 },
     { borda: "provolone", valorBorda: 8.00 },
     { borda: "catupiry", valorBorda: 5.00 },
-    {
-        borda: "cheddar",
-        valorBorda: 5.00
-
-    },
-    {
-        borda: "sem borda",
-        valorBorda: 0.00
-    }
+    {borda: "cheddar",valorBorda: 5.00},
+    {borda: "sem borda",valorBorda: 0.00}
 ]
 const saborPizza = [
     {
@@ -112,7 +105,13 @@ const formaPagamento = [
 
 let carrinho = {};
 
-let tamanho = document.getElementById("tamanho")
+let usuario= {}; 
+
+
+
+function chamarPagina1(){
+    document.getElementById('pagina1').style.display = "block"
+}
 
 function meuPedido() {
 
@@ -139,6 +138,10 @@ function meuPedido() {
 
     console.log(carrinho)
 }
+
+
+
+
 
 
 function saberTamanhoPizza() {
@@ -228,23 +231,28 @@ function saberTipoPagamento() {
 
 function esconder(){
 
-    let todos = document.getElementsByClassName('escondido')
-
-    for( i = 0; i < todos.length; i++){
-        todos[i].style.display = 'none';
-    }
-
-    let botaoConfirmacao = document.getElementsByClassName('confirmacao')
-
-    for( i = 0; i < botaoConfirmacao.length; i++){
-        botaoConfirmacao[i].style.display = 'block';
-    }
+    document.getElementById('pagina1').style.display = "none"
 }
 
-function sim() {
+function calcular( ){
+
+    let pedido = document.getElementById('informacoesPedido')
+
+    let valorTotal = carrinho.valorTamanho + carrinho.valorBorda + carrinho.valorBebida + carrinho.valorEntrega
+
+    pedido.innerHTML = 
+    `   
+        <p>Confira abaixo as informações do seu pedido: </p>
+        <p>Tamanho:  ${carrinho.tipoTamanho} </p>
+        <p>Sabor:  ${carrinho.sabor} </p>
+        <p>Borda:  ${carrinho.borda} </p>
+        <p>Bebida: ${carrinho.tipoBebida} </p>
+        <p>Tipo de entrega: ${carrinho.entrega} </p>
+        <p>Forma de pagamento: ${carrinho.tipoPagamento} </p>
+        <p>O valor total do seu pedido é igual à: R$ ${valorTotal}<p>`
+      
 
 }
-
 function nao() {
 
     let todos = document.getElementsByClassName('escondido')
@@ -260,20 +268,11 @@ function nao() {
     }
 }
 
+function sim() {
 
-function calcular( ){
+}
 
-    let pedido = document.getElementById('informacoesPedido')
+function dadosUsuario(){
 
-    let valorTotal = carrinho.valorTamanho + carrinho.valorBorda + carrinho.valorBebida + carrinho.valorEntrega
-
-    pedido.innerHTML = 
-    `
-        Tamanho ${carrinho.tipoTamanho} <br>
-        O sabor da sua pizza é ${carrinho.sabor} <br>
-        O valor total do seu pedido é igual à: ${valorTotal}
-       
-     `
-
-
+    nome
 }
