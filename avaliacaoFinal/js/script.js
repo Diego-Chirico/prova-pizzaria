@@ -123,55 +123,20 @@ function meuPedido() {
     saberTamanhoPizza()
 
     saberTipoSabor()
-    
 
+    saberTipoBorda()
 
-    
-    let tipoDeBorda = document.getElementById(`bordasPizzas`).value
-    let tipoDeBebida = document.getElementById(`bebidas`).value
-    let tipoDeEntrega = document.getElementById(`tiposEntregas`).value
-    let tipoDePagamento = document.getElementById(`tiposPagamentos`).value
+    saberTipoBebida()
 
-    
-    for (posicao in tipoBorda) {
+    saberTipoEntrega()
 
-        if (tipoDeBorda == tipoBorda[posicao].borda) {
-            Object.assign(carrinho, tipoBorda[posicao])
-            console.log(carrinho)
-        }
-    }
-
-    for (posicao in bebida) {
-
-        if (tipoDeBebida == bebida[posicao].tipoBebida) {
-            Object.assign(carrinho, bebida[posicao])
-            console.log(carrinho)
-        }
-    }
-
-
-    for (posicao in tipoEntrega) {
-
-        if (tipoDeEntrega == tipoEntrega[posicao].entrega) {
-            Object.assign(carrinho, tipoEntrega[posicao])
-            console.log(carrinho)
-
-        }
-
-    }
-
-
-    for (posicao in formaPagamento) {
-
-        if (tipoDePagamento == formaPagamento[posicao].tipoPagamento) {
-            Object.assign(carrinho, formaPagamento[posicao])
-            console.log(carrinho)
-        }
-
-    }
+    saberTipoPagamento()
 
     console.log(carrinho)
 }
+
+
+
 
 
 function saberTamanhoPizza() {
@@ -187,7 +152,7 @@ function saberTamanhoPizza() {
     }
 }
 
-function saberTipoSabor(){
+function saberTipoSabor() {
 
     let saborDaPizza = document.getElementById(`saboresPizzas`).value
 
@@ -198,4 +163,67 @@ function saberTipoSabor(){
             console.log(carrinho)
         }
     }
+}
+
+function saberTipoBorda() {
+
+    let tipoDeBorda = document.getElementById(`bordasPizzas`).value
+
+    for (posicao in tipoBorda) {
+
+        if (tipoDeBorda == tipoBorda[posicao].borda) {
+            Object.assign(carrinho, tipoBorda[posicao])
+            console.log(carrinho)
+        }
+    }
+}
+
+function saberTipoBebida() {
+
+    let tipoDeBebida = document.getElementById(`bebidas`).value
+
+    for (posicao in bebida) {
+
+        if (tipoDeBebida == bebida[posicao].tipoBebida) {
+            Object.assign(carrinho, bebida[posicao])
+            console.log(carrinho)
+        }
+    }
+
+}
+
+function saberTipoEntrega() {
+
+    let tipoDeEntrega = document.getElementById(`tiposEntregas`).value
+
+
+    for (posicao in tipoEntrega) {
+
+        if (tipoDeEntrega == tipoEntrega[posicao].entrega) {
+            Object.assign(carrinho, tipoEntrega[posicao])
+            console.log(carrinho)
+
+        }
+
+    }
+
+}
+
+function saberTipoPagamento() {
+
+    let tipoDePagamento = document.getElementById(`tiposPagamentos`).value
+
+    for (posicao in formaPagamento) {
+
+        if (tipoDePagamento == formaPagamento[posicao].tipoPagamento) {
+            Object.assign(carrinho, formaPagamento[posicao])
+            console.log(carrinho)
+        }
+
+    }
+
+}
+
+function esconder(){
+    
 }
