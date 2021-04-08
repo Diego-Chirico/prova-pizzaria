@@ -1,0 +1,78 @@
+Avaliação final
+
+
+Valor: 60 Pontos
+
+Objetivo: Criar um sistema para efetuar pedidos em Pizzaria.
+
+
+Devido a pandemia e algumas descobertas em sua vida, o professor está largando a vida de Desenvolvedor e vai ser Dono de Pizzaria, com isso ele precisa de um sistema para que o usuário consiga fazer pedidos de forma simples e intuitiva sem sair de sua casa.
+
+Ele precisa que neste sistema o usuário consiga escolher:
+
+O tamanho da pizza
+(Pequena 20cm  - R$25,00)
+(Media 25cm  - R$30,00)
+(Gigante 35cm  - R$40,00)
+(Familia 40cm  - R$45,00)
+Tipo de borda
+(Gorgonzola  - R$10,00)
+(Provolone  - R$8,00)
+(Catupiry  - R$5,00)
+(Cheddar - R$5,00)
+(Sem borda  - R$0,00)
+Sabores (Apenas 2 sabores por pizza)
+(Calabresa)	
+Mussarela, Calabresa e cebola
+(4 Queijos)
+Mussarela, Cheddar, Parmesão e Prato
+(Frango com Catupiry)
+Mussarela, Frango e Catupiry
+(Portuguesa)
+Mussarela, Pimentão, Cebola, Presunto, Ovo, Cebola
+(Camarão)
+Mussarela, Camarão, Salsinha e Cebolinha
+(Carne seca)
+Mussarela, Carne seca e cream cheese
+(Lombo Canadense)
+Mussarela, Lombo Canadense, Tomate, Orégano, Cebola
+(X-Fritas)
+Mussarela, Contra-filé, Presunto, Bacon, Ovo, Tomate, Cebola, Batata Frita
+Bebidas
+(Coca Cola  - R$12,00)
+(Fanta - R$10,00)
+(Guaraná Antarctica  - R$10,00)
+(H2O  - R$8,00)
+(Del Valle  - R$7,00)
+Tipo de entrega
+(Retirada no Balcão - R$0,00)
+(Delivery  - R$5,00)
+Dados para entrega
+Nome, Celular, Rua, Número, Complemento, Bairro, Ponto de referência
+Confirmar pedido
+Sim  ou Não
+Forma de Pagamento
+(Cartão - Debito ou Credito)
+Pix
+PicPay
+Dinheiro 
+Perguntar se precisa de troco
+
+Obs: Antes de confirmar o pedido, o usuário deve receber na tela o valor total do seu pedido até o momento.
+Obs: Nesta primeira versão do app, o usuário só poderá escolher 1 pizza e uma bebida por pedido.
+Obs: Nesta primeira versão do app, o usuário só poderá escolher 1 forma de pagamento.
+Obs: Ao final, quando o pedido for finalizado, o sistema deve informar um número de pedido que será gerado randomicamente ao usuário e informar que o tempo estimado para entrega é de até 90 minutos.
+Obs: Ao final, mandar uma mensagem ao usuário desta forma: “Agradecemos sua preferência senhor(a) Fulano de tal.”
+
+
+Regras do jogo:
+
+
+Fazer em grupos de até 6 pessoas.
+Todo o projeto deve ser versionado no github de forma pública.
+Cada grupo deve fazer no mínimo um Commit a cada 30 minutos.
+Faça o sistema com bastante cuidado, pensando bem em cada etapa.
+Manter o código bem escrito respeitando todas as boas práticas aprendidas durante a disciplina.
+
+
+
