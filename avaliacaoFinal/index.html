@@ -11,10 +11,7 @@
 </head>
 
 <body>
-    <div id="corpo">
-
-        <div id="conteudo">
-
+    <div id="pagina1">
             <h1>Pizzaria do Professor DEV</h1>
 
             <p> Devido a pandemia e algumas descobertas em sua vida, o professor está largando a vida de
@@ -23,15 +20,16 @@
             </p>
 
             <h2>Nosso cardápio</h2>
+
             <div id="cardapios">
-                <ul></ul>
+                <ul>aew</ul>
             </div>
 
             <button onclick="chamarPagina1()">Faça seu pedido agora</button>
 
             <!-- Primeira página -->
 
-            <div id="pagina1">
+            <div id="conteudo">
 
                 <div class="itensPizza">
                     <p>Escolha sua pizza:</p>
@@ -98,35 +96,35 @@
                 <button onclick="meuPedido()">Fazer pedido</button>
             </div>
 
+    </div>
+
+    <!-- Página 2 -->
+
+    <div id="pagina2">
+        <div class="conteudo">
+            <p id="informacoesPedido"></p>
+            <p> Deseja confirmar o seu pedido? </p>
+            <button class="confirmacao" id="confirmar" onclick="sim()">Sim</button>
+            <button class="confirmacao" id="negar" onclick="nao()">Não</button>
         </div>
+    </div>
 
-        <!-- Página 2 -->
+    <!-- Página 3 -->
 
-        <div id="pagina2">
-            <div class="conteudo">
-                <p id="informacoesPedido"></p>
-                <p> Deseja confirmar o seu pedido? </p>
-                <button class="confirmacao" id="confirmar" onclick="sim()">Sim</button>
-                <button class="confirmacao" id="negar" onclick="nao()">Não</button>
-            </div>
+    <div id="pagina3">
+        <div class="conteudo">
+            <input type="text" name="nome do cliente" id="nome" placeholder="nome">
+            <input type="text" name="rua" id="rua" placeholder="rua">
+            <input type="text" name="número da casa" id="casa" placeholder="número da casa">
+            <input type="text" name="complemento" id="complemento" placeholder="complemento">
+            <input type="text" name="bairro" id="bairro" placeholder="bairro">
+            <input type="text" name="ponto de referência" id="referencia" placeholder="ponto de referência">
+            <input type="text" name="cep" id="cep" placeholder="CEP">
+            <input type="number" name="número de telefone" id="telefone" placeholder="número de telefone:">
+
+            <button onclick="enviar()">Enviar</button>
         </div>
-
-        <!-- Página 3 -->
-
-        <div class="pagina3">
-            <div class="conteudo">
-                <input type="text" name="nome do cliente" id="nome" placeholder="nome">
-                <input type="text" name="rua" id="rua" placeholder="rua">
-                <input type="text" name="número da casa" id="casa" placeholder="número da casa">
-                <input type="text" name="complemento" id="complemento" placeholder="complemento">
-                <input type="text" name="bairro" id="bairro" placeholder="bairro">
-                <input type="text" name="ponto de referência" id="referencia" placeholder="ponto de referência">
-                <input type="text" name="cep" id="cep" placeholder="CEP">
-                <input type="number" name="número de telefone" id="telefone" placeholder="número de telefone:">
-
-                <button onclick="enviar()">Enviar</button>
-            </div>
-        </div>
+    </div>
 
     </div>
 
