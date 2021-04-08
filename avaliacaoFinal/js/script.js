@@ -113,13 +113,7 @@ const tipoDeEntrega = [
         valor: 5.00
     }   
 ]
-
-let dadosDoUsuario = []
-
-
-
-
-
+const formaDePagamento = ["Dinheiro", "Cartão (crédito ou débito)", "Pix", "Pic Pay"]
 
 
 
