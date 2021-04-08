@@ -20,27 +20,15 @@ const tamanhoPizza = [
         valorTamanho: 45
     }
 ]
-
 const tipoBorda = [
-    {
-        borda: "gorgonzola",
-        valorBorda: 10.00
-    },
-    {
-        borda: "provolone",
-        valorBorda: 8.00
-    },
-    {
-        borda: "catupiry",
-        valorBorda: 5.00
-    },
-
+    { borda: "gorgonzola", valorBorda: 10.00 },
+    { borda: "provolone", valorBorda: 8.00 },
+    { borda: "catupiry", valorBorda: 5.00 },
     {
         borda: "cheddar",
         valorBorda: 5.00
 
     },
-
     {
         borda: "sem borda",
         valorBorda: 0.00
@@ -91,11 +79,11 @@ const bebida = [
         valorBebida: 10.00
     },
     {
-       tipoBebida: "Guaraná Antarctica",
+        tipoBebida: "Guaraná Antarctica",
         valorBebida: 10.00
     },
     {
-       tipoBebida: "H2O",
+        tipoBebida: "H2O",
         valorBebida: 8.00
     },
     {
@@ -111,112 +99,103 @@ const tipoEntrega = [
     {
         entrega: "delivery",
         valorEntrega: 5.00
-    }   
+    }
 ]
-const formaPagamento = [ 
-    {tipoPagamento: "cartão de débito"}, 
-    {tipoPagamento: "cartão de crédito"},
-    {tipoPagamento: "pix"},
-    {tipoPagamento: "pic pay"},
-    {tipoPagamento: "dinheiro"}
+const formaPagamento = [
+    { tipoPagamento: "cartão de débito" },
+    { tipoPagamento: "cartão de crédito" },
+    { tipoPagamento: "pix" },
+    { tipoPagamento: "pic pay" },
+    { tipoPagamento: "dinheiro" }
 ]
-   
 
-let carrinho= []
+
+let carrinho = []
 
 let tamanho = document.getElementById("tamanho")
 
 function meuPedido() {
-   
-// tamanhoPizza = array 
-//tamanhosPizzas = id select
-// tamanhoDaPizza =  variável que recebe o select
+
+    // tamanhoPizza = array 
+    //tamanhosPizzas = id select
+    // tamanhoDaPizza =  variável que recebe o select
+
+    saberTamanhoPizza()
+
+    saberTipoSabor()
+    
 
 
-   
-    let tamanhoDaPizza = document.getElementById('tamanhosPizzas').value
-    let saborDaPizza = document.getElementById(`saboresPizzas`).value
+    
     let tipoDeBorda = document.getElementById(`bordasPizzas`).value
     let tipoDeBebida = document.getElementById(`bebidas`).value
     let tipoDeEntrega = document.getElementById(`tiposEntregas`).value
     let tipoDePagamento = document.getElementById(`tiposPagamentos`).value
 
-    console.log(tamanhoDaPizza)
+    
+    for (posicao in tipoBorda) {
 
-    for(posicao in tamanhoPizza){
-        
-        if(tamanhoDaPizza == tamanhoPizza[posicao].tipoTamanho){
-        //    tamanho.innerHTML= `O tamanho de pizza que você escolheu é: ${tamanhoDaPizza}, o valor da pizza é igual a: ${(tamanhoPizza[cont].valor).toLocaleString('pt-br', {style: 'currency', currency:'BRL'})}`
-        
-            Object.assign(carrinho, tamanhoPizza[posicao])
-            console.log(carrinho)
-        } 
-        
-    }
-
-    console.log(saborDaPizza)
-
-    for(posicao in saborPizza){
-
-        if(saborDaPizza == saborPizza[posicao].sabor){
-
-            Object.assign(carrinho, saborPizza[posicao])
+        if (tipoDeBorda == tipoBorda[posicao].borda) {
+            Object.assign(carrinho, tipoBorda[posicao])
             console.log(carrinho)
         }
-
-
     }
 
-    console.log(tipoDeBorda)
+    for (posicao in bebida) {
 
-    for(posicao in tipoBorda){
-
-            if(tipoDeBorda == tipoBorda[posicao].borda){
-                Object.assign(carrinho , tipoBorda[posicao])
-                console.log(carrinho)
-            }
-
-    }
-
-    console.log(tipoDeBebida)
-
-    for(posicao in bebida){
-
-        if(tipoDeBebida == bebida[posicao].tipoBebida){
+        if (tipoDeBebida == bebida[posicao].tipoBebida) {
             Object.assign(carrinho, bebida[posicao])
             console.log(carrinho)
-
         }
-
     }
 
-    console.log(tipoDeEntrega)
 
-    for (posicao in tipoEntrega){
+    for (posicao in tipoEntrega) {
 
-        if(tipoDeEntrega == tipoEntrega[posicao].entrega){
+        if (tipoDeEntrega == tipoEntrega[posicao].entrega) {
             Object.assign(carrinho, tipoEntrega[posicao])
             console.log(carrinho)
-       
+
         }
-   
+
     }
 
-    console.log(tipoDePagamento)
 
-    for (posicao in formaPagamento){
+    for (posicao in formaPagamento) {
 
-        if(tipoDePagamento == formaPagamento[posicao].tipoPagamento){
+        if (tipoDePagamento == formaPagamento[posicao].tipoPagamento) {
             Object.assign(carrinho, formaPagamento[posicao])
             console.log(carrinho)
         }
 
     }
 
-    
+    console.log(carrinho)
 }
 
 
+function saberTamanhoPizza() {
 
+    let tamanhoDaPizza = document.getElementById('tamanhosPizzas').value
 
+    for (posicao in tamanhoPizza) {
 
+        if (tamanhoDaPizza == tamanhoPizza[posicao].tipoTamanho) {
+            Object.assign(carrinho, tamanhoPizza[posicao])
+            console.log(carrinho)
+        }
+    }
+}
+
+function saberTipoSabor(){
+
+    let saborDaPizza = document.getElementById(`saboresPizzas`).value
+
+    for (posicao in saborPizza) {
+
+        if (saborDaPizza == saborPizza[posicao].sabor) {
+            Object.assign(carrinho, saborPizza[posicao])
+            console.log(carrinho)
+        }
+    }
+}
