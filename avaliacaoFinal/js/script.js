@@ -24,8 +24,8 @@ const tipoBorda = [
     { borda: "gorgonzola", valorBorda: 10.00 },
     { borda: "provolone", valorBorda: 8.00 },
     { borda: "catupiry", valorBorda: 5.00 },
-    {borda: "cheddar",valorBorda: 5.00},
-    {borda: "sem borda",valorBorda: 0.00}
+    { borda: "cheddar", valorBorda: 5.00 },
+    { borda: "sem borda", valorBorda: 0.00 }
 ]
 const saborPizza = [
     {
@@ -103,13 +103,10 @@ const formaPagamento = [
 ]
 
 
-let carrinho = {};
-
-let usuario= {}; 
+let pedido = {};
 
 
-
-function chamarPagina1(){
+function chamarPagina1() {
     document.getElementById('pagina1').style.display = "block"
 }
 
@@ -136,7 +133,7 @@ function meuPedido() {
     calcular()
 
 
-    console.log(carrinho)
+    console.log(pedido)
 }
 
 
@@ -151,8 +148,8 @@ function saberTamanhoPizza() {
     for (posicao in tamanhoPizza) {
 
         if (tamanhoDaPizza == tamanhoPizza[posicao].tipoTamanho) {
-            Object.assign(carrinho, tamanhoPizza[posicao])
-            console.log(carrinho)
+            Object.assign(pedido, tamanhoPizza[posicao])
+            console.log(pedido)
         }
     }
 }
@@ -164,8 +161,8 @@ function saberTipoSabor() {
     for (posicao in saborPizza) {
 
         if (saborDaPizza == saborPizza[posicao].sabor) {
-            Object.assign(carrinho, saborPizza[posicao])
-            console.log(carrinho)
+            Object.assign(pedido, saborPizza[posicao])
+            console.log(pedido)
         }
     }
 }
@@ -177,8 +174,8 @@ function saberTipoBorda() {
     for (posicao in tipoBorda) {
 
         if (tipoDeBorda == tipoBorda[posicao].borda) {
-            Object.assign(carrinho, tipoBorda[posicao])
-            console.log(carrinho)
+            Object.assign(pedido, tipoBorda[posicao])
+            console.log(pedido)
         }
     }
 }
@@ -190,8 +187,8 @@ function saberTipoBebida() {
     for (posicao in bebida) {
 
         if (tipoDeBebida == bebida[posicao].tipoBebida) {
-            Object.assign(carrinho, bebida[posicao])
-            console.log(carrinho)
+            Object.assign(pedido, bebida[posicao])
+            console.log(pedido)
         }
     }
 
@@ -205,8 +202,8 @@ function saberTipoEntrega() {
     for (posicao in tipoEntrega) {
 
         if (tipoDeEntrega == tipoEntrega[posicao].entrega) {
-            Object.assign(carrinho, tipoEntrega[posicao])
-            console.log(carrinho)
+            Object.assign(pedido, tipoEntrega[posicao])
+            console.log(pedido)
 
         }
 
@@ -221,49 +218,49 @@ function saberTipoPagamento() {
     for (posicao in formaPagamento) {
 
         if (tipoDePagamento == formaPagamento[posicao].tipoPagamento) {
-            Object.assign(carrinho, formaPagamento[posicao])
-            console.log(carrinho)
+            Object.assign(pedido, formaPagamento[posicao])
+            console.log(pedido)
         }
 
     }
 
 }
 
-function esconder(){
+function esconder() {
 
     document.getElementById('pagina1').style.display = "none"
 }
 
-function calcular( ){
+function calcular() {
 
     let pedido = document.getElementById('informacoesPedido')
 
-    let valorTotal = carrinho.valorTamanho + carrinho.valorBorda + carrinho.valorBebida + carrinho.valorEntrega
+    let valorTotal = pedido.valorTamanho + pedido.valorBorda + pedido.valorBebida + pedido.valorEntrega
 
-    pedido.innerHTML = 
-    `   
+    pedido.innerHTML =
+        `   
         <p>Confira abaixo as informações do seu pedido: </p>
-        <p>Tamanho:  ${carrinho.tipoTamanho} </p>
-        <p>Sabor:  ${carrinho.sabor} </p>
-        <p>Borda:  ${carrinho.borda} </p>
-        <p>Bebida: ${carrinho.tipoBebida} </p>
-        <p>Tipo de entrega: ${carrinho.entrega} </p>
-        <p>Forma de pagamento: ${carrinho.tipoPagamento} </p>
+        <p>Tamanho:  ${pedido.tipoTamanho} </p>
+        <p>Sabor:  ${pedido.sabor} </p>
+        <p>Borda:  ${pedido.borda} </p>
+        <p>Bebida: ${pedido.tipoBebida} </p>
+        <p>Tipo de entrega: ${pedido.entrega} </p>
+        <p>Forma de pagamento: ${pedido.tipoPagamento} </p>
         <p>O valor total do seu pedido é igual à: R$ ${valorTotal}<p>`
-      
+
 
 }
 function nao() {
 
     let todos = document.getElementsByClassName('escondido')
 
-    for( i = 0; i < todos.length; i++){
+    for (i = 0; i < todos.length; i++) {
         todos[i].style.display = 'block';
     }
 
     let botaoConfirmacao = document.getElementsByClassName('confirmacao')
 
-    for( i = 0; i < botaoConfirmacao.length; i++){
+    for (i = 0; i < botaoConfirmacao.length; i++) {
         botaoConfirmacao[i].style.display = 'none';
     }
 }
@@ -272,7 +269,22 @@ function sim() {
 
 }
 
-function dadosUsuario(){
 
-    nome
+
+function enviar() {
+
+    let dadosUsuario = {
+
+        nome: document.getElementById("nome"),
+        rua: document.getElementById("rua"),
+        numeroCasa: document.getElementById("casa"),
+        complemento: document.getElementById("complemento"),
+        bairro: document.getElementById("bairro"),
+        cep: document.getElementById("cep"),
+        pontoReferencia: document.getElementById("referencia"),
+        numeroTelefone: document.getElementById("telefone")
+
+    }
+    
+    Object.assign(pedido, dadosUsuario);
 }
