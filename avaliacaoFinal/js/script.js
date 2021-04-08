@@ -142,7 +142,7 @@ function meuPedido() {
         
     }
 
-    let saborDaPizza = document.getElementById(` saboresPizzas`).value
+    let saborDaPizza = document.getElementById(`saboresPizzas`).value
 
     console.log(saborDaPizza)
 
