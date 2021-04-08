@@ -5,7 +5,7 @@ const tamanhoPizza = [
         valor: 25
     },
     {
-        tipo: "media",
+        tipo: "média",
         tamanho: 25,
         valor: 30
     },
@@ -15,13 +15,13 @@ const tamanhoPizza = [
         valor: 40
     },
     {
-        tipo: "familia",
+        tipo: "família",
         tamanho: 40,
         valor: 45
     }
 ]
 
-const tipoDeBorda = [
+const tipoBorda = [
     {
         borda: "gorgonzola",
         valor: 10.00
@@ -46,42 +46,42 @@ const tipoDeBorda = [
         valor: 0.00
     }
 ]
-const sabores = [
+const saborPizza = [
     {
-        sabor: "Calabresa",
-        ingredientes: "mussarela,cebola e calabresa"
+        sabor: "calabresa",
+        ingredientes: "mussarela, cebola e calabresa"
     },
     {
         sabor: "4 queijos",
-        ingredientes: "mussarela,cheddar, parmesão, prato"
+        ingredientes: "mussarela, cheddar, parmesão e prato"
     },
     {
-        sabor: "Frango com catupiry",
+        sabor: "frango com catupiry",
         ingredientes: "mussarela, frango e catupiry"
     },
     {
-        sabor: "Portuguesa",
-        ingredientes: "mussarela, pimentão, cebola, presunto, ovo"
+        sabor: "portuguesa",
+        ingredientes: "mussarela, pimentão, cebola, presunto e ovo"
     },
 
     {
-        sabor: "Camarão",
+        sabor: "camarão",
         ingredientes: "mussarela, camarão, salsinha e cebolinha"
     },
     {
-        sabor: "Carne Seca",
-        ingredientes: "mussarela, carne seca,  cream cheese"
+        sabor: "carne seca",
+        ingredientes: "mussarela, carne seca e cream cheese"
     },
     {
-        sabor: " Lombo Canadense",
-        ingredientes: " mussarela, lombo canadense, tomate, orégano, cebola"
+        sabor: "lombo canadense",
+        ingredientes: " mussarela, lombo canadense, tomate, orégano e cebola"
     },
     {
-        sabor: "X - Fritas",
-        ingredientes: "mussarela, contra-filé, presunto, bacon, ovo, tomate, cebola, batata frita "
+        sabor: "X- fritas",
+        ingredientes: "mussarela, contra-filé, presunto, bacon, ovo, tomate, cebola e batata frita "
     }
 ]
-const bebidas = [
+const bebida = [
     {
         bebida: "Coca-Cola",
         valor: 12.00
@@ -91,7 +91,7 @@ const bebidas = [
         valor: 10.00
     },
     {
-        tipo: "Guaraná Antartica",
+        tipo: "Guaraná Antarctica",
         valor: 10.00
     },
     {
@@ -103,17 +103,17 @@ const bebidas = [
         valor: 7.00
     }
 ]
-const tipoDeEntrega = [
+const tipoEntrega = [
     {
-        entrega: "Retirada no Balcão",
+        entrega: "retirada no balcão",
         valor: 0.00
     },
     {
-        entrega: "Delivery",
+        entrega: "delivery",
         valor: 5.00
     }   
 ]
-const formaDePagamento = ["Dinheiro", "Cartão (crédito ou débito)", "Pix", "Pic Pay"]
+const formaPagamento = ["Dinheiro", "Cartão (crédito ou débito)", "Pix", "Pic Pay"]
 
 let carrinho= []
 
@@ -124,7 +124,7 @@ function meuPedido() {
 // tamanhoPizza = array 
 //tamanhosPizzas = id select
 // tamanhoDaPizza =  variável que recebe o select
-//
+
 
    
     let tamanhoDaPizza = document.getElementById('tamanhosPizzas').value
@@ -142,7 +142,19 @@ function meuPedido() {
         
     }
 
-    let 
+    let saborDaPizza = document.getElementById(` saboresPizzas`).value
+
+    console.log(saborDaPizza)
+
+    for(posicao in saborPizza){
+
+        if(saborDaPizza == saborPizza[posicao].sabor){
+
+            Object.assingn(carrinho, saborPizza[posicao])
+        }
+
+
+    }
     
 
 }
