@@ -15,12 +15,14 @@ O tamanho da pizza
 (Media 25cm  - R$30,00)
 (Gigante 35cm  - R$40,00)
 (Familia 40cm  - R$45,00)
+
 Tipo de borda
 (Gorgonzola  - R$10,00)
 (Provolone  - R$8,00)
 (Catupiry  - R$5,00)
 (Cheddar - R$5,00)
 (Sem borda  - R$0,00)
+
 Sabores (Apenas 2 sabores por pizza)
 (Calabresa)	
 Mussarela, Calabresa e cebola
@@ -38,19 +40,25 @@ Mussarela, Carne seca e cream cheese
 Mussarela, Lombo Canadense, Tomate, Orégano, Cebola
 (X-Fritas)
 Mussarela, Contra-filé, Presunto, Bacon, Ovo, Tomate, Cebola, Batata Frita
+
 Bebidas
 (Coca Cola  - R$12,00)
 (Fanta - R$10,00)
 (Guaraná Antarctica  - R$10,00)
 (H2O  - R$8,00)
 (Del Valle  - R$7,00)
+
+
 Tipo de entrega
 (Retirada no Balcão - R$0,00)
 (Delivery  - R$5,00)
+
 Dados para entrega
 Nome, Celular, Rua, Número, Complemento, Bairro, Ponto de referência
+
 Confirmar pedido
 Sim  ou Não
+
 Forma de Pagamento
 (Cartão - Debito ou Credito)
 Pix
