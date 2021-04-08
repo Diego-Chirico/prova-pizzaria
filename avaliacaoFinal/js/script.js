@@ -115,25 +115,36 @@ const tipoDeEntrega = [
 ]
 const formaDePagamento = ["Dinheiro", "Cartão (crédito ou débito)", "Pix", "Pic Pay"]
 
+let carrinho= []
 
-
-
+let tamanho = document.getElementById("tamanho")
 
 function meuPedido() {
    
+// tamanhoPizza = array 
+//tamanhosPizzas = id select
+// tamanhoDaPizza =  variável que recebe o select
+//
 
+   
     let tamanhoDaPizza = document.getElementById('tamanhosPizzas').value
 
     console.log(tamanhoDaPizza)
 
-    for(cont in tamanhoPizza){
-        if(tamanhoDaPizza == tamanhoPizza[cont].tipo){
-            console.log(`O tipo de pizza que você escolheu é: ${tamanhoDaPizza}, o valor da pizza é igual a: ${(tamanhoPizza[cont].valor).toLocaleString('pt-br', {style: 'currency', currency:'BRL'})} esse é valor <<<<<`)
+    for(posicao in tamanhoPizza){
         
+        if(tamanhoDaPizza == tamanhoPizza[posicao].tipo){
+        //    tamanho.innerHTML= `O tamanho de pizza que você escolheu é: ${tamanhoDaPizza}, o valor da pizza é igual a: ${(tamanhoPizza[cont].valor).toLocaleString('pt-br', {style: 'currency', currency:'BRL'})}`
         
-        }
+            Object.assign(carrinho, tamanhoPizza[posicao])
+            console.log(carrinho)
+        } 
         
     }
 
+    let 
+    
+
 }
+
 
