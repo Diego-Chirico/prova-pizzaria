@@ -1,49 +1,49 @@
 const tamanhoPizza = [
     {
-        tipo: "pequena",
+        tipoTamanho: "pequena",
         tamanho: 20,
-        valor: 25
+        valorTamanho: 25
     },
     {
-        tipo: "média",
+        tipoTamanho: "média",
         tamanho: 25,
-        valor: 30
+        valorTamanho: 30
     },
     {
-        tipo: "gigante",
+        tipoTamanho: "gigante",
         tamanho: 35,
-        valor: 40
+        valorTamanho: 40
     },
     {
-        tipo: "família",
+        tipoTamanho: "família",
         tamanho: 40,
-        valor: 45
+        valorTamanho: 45
     }
 ]
 
 const tipoBorda = [
     {
         borda: "gorgonzola",
-        valor: 10.00
+        valorBorda: 10.00
     },
     {
         borda: "provolone",
-        valor: 8.00
+        valorBorda: 8.00
     },
     {
         borda: "catupiry",
-        valor: 5.00
+        valorBorda: 5.00
     },
 
     {
         borda: "cheddar",
-        valor: 5.00
+        valorBorda: 5.00
 
     },
 
     {
         borda: "sem borda",
-        valor: 0.00
+        valorBorda: 0.00
     }
 ]
 const saborPizza = [
@@ -83,37 +83,44 @@ const saborPizza = [
 ]
 const bebida = [
     {
-        bebida: "Coca-Cola",
-        valor: 12.00
+        tipoBebida: "Coca-Cola",
+        valorBebida: 12.00
     },
     {
-        tipo: "Fanta",
-        valor: 10.00
+        tipoBebida: "Fanta",
+        valorBebida: 10.00
     },
     {
-        tipo: "Guaraná Antarctica",
-        valor: 10.00
+       tipoBebida: "Guaraná Antarctica",
+        valorBebida: 10.00
     },
     {
-        tipo: "H2O",
-        valor: 8.00
+       tipoBebida: "H2O",
+        valorBebida: 8.00
     },
     {
-        tipo: "Del Valle",
-        valor: 7.00
+        tipoBebida: "Del Valle",
+        valorBebida: 7.00
     }
 ]
 const tipoEntrega = [
     {
         entrega: "retirada no balcão",
-        valor: 0.00
+        valorEntrega: 0.00
     },
     {
         entrega: "delivery",
-        valor: 5.00
+        valorEntrega: 5.00
     }   
 ]
-const formaPagamento = ["Dinheiro", "Cartão (crédito ou débito)", "Pix", "Pic Pay"]
+const formaPagamento = [ 
+    {tipoPagamento: "cartão de débito"}, 
+    {tipoPagamento: "cartão de crédito"},
+    {tipoPagamento: "pix"},
+    {tipoPagamento: "pic pay"},
+    {tipoPagamento: "dinheiro"}
+]
+   
 
 let carrinho= []
 
@@ -128,12 +135,17 @@ function meuPedido() {
 
    
     let tamanhoDaPizza = document.getElementById('tamanhosPizzas').value
+    let saborDaPizza = document.getElementById(`saboresPizzas`).value
+    let tipoDeBorda = document.getElementById(`bordasPizzas`).value
+    let tipoDeBebida = document.getElementById(`bebidas`).value
+    let tipoDeEntrega = document.getElementById(`tiposEntregas`).value
+    let tipoDePagamento = document.getElementById(`tiposPagamentos`).value
 
     console.log(tamanhoDaPizza)
 
     for(posicao in tamanhoPizza){
         
-        if(tamanhoDaPizza == tamanhoPizza[posicao].tipo){
+        if(tamanhoDaPizza == tamanhoPizza[posicao].tipoTamanho){
         //    tamanho.innerHTML= `O tamanho de pizza que você escolheu é: ${tamanhoDaPizza}, o valor da pizza é igual a: ${(tamanhoPizza[cont].valor).toLocaleString('pt-br', {style: 'currency', currency:'BRL'})}`
         
             Object.assign(carrinho, tamanhoPizza[posicao])
@@ -142,21 +154,69 @@ function meuPedido() {
         
     }
 
-    let saborDaPizza = document.getElementById(`saboresPizzas`).value
-
     console.log(saborDaPizza)
 
     for(posicao in saborPizza){
 
         if(saborDaPizza == saborPizza[posicao].sabor){
 
-            Object.assingn(carrinho, saborPizza[posicao])
+            Object.assign(carrinho, saborPizza[posicao])
+            console.log(carrinho)
         }
 
 
     }
-    
 
+    console.log(tipoDeBorda)
+
+    for(posicao in tipoBorda){
+
+            if(tipoDeBorda == tipoBorda[posicao].borda){
+                Object.assign(carrinho , tipoBorda[posicao])
+                console.log(carrinho)
+            }
+
+    }
+
+    console.log(tipoDeBebida)
+
+    for(posicao in bebida){
+
+        if(tipoDeBebida == bebida[posicao].tipoBebida){
+            Object.assign(carrinho, bebida[posicao])
+            console.log(carrinho)
+
+        }
+
+    }
+
+    console.log(tipoDeEntrega)
+
+    for (posicao in tipoEntrega){
+
+        if(tipoDeEntrega == tipoEntrega[posicao].entrega){
+            Object.assign(carrinho, tipoEntrega[posicao])
+            console.log(carrinho)
+       
+        }
+   
+    }
+
+    console.log(tipoDePagamento)
+
+    for (posicao in formaPagamento){
+
+        if(tipoDePagamento == formaPagamento[posicao].tipoPagamento){
+            Object.assign(carrinho, formaPagamento[posicao])
+            console.log(carrinho)
+        }
+
+    }
+
+    
 }
+
+
+
 
 
