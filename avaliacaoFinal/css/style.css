@@ -47,6 +47,9 @@ select option {
     background-color: #B4A3C5;
 }
 
+.conteudo {
+    min-height: 100vh;
+}
 
 /* pagina 1 */
 
@@ -69,11 +72,11 @@ select option {
 /* pagina 2 */
 
 #pagina2 {
-    display: none;
+    display: flex;
 }
 
 /* pagina 3 */
 
 #pagina3 {
-    display: none;
+    display: flex;
 }

@@ -13,113 +13,121 @@
 <body>
     <div id="corpo">
 
-        <h1>Pizzaria do Professor DEV</h1>
+        <div id="conteudo">
 
-        <p> Devido a pandemia e algumas descobertas em sua vida, o professor está largando a vida de
-            <strong>Desenvolvedor</strong> e vai ser <strong>Dono de Pizzaria</strong>, com isso ele precisa de um
-            sistema para que o usuário consiga fazer pedidos de forma simples e intuitiva sem sair de sua casa.
-        </p>
+            <h1>Pizzaria do Professor DEV</h1>
 
-        <h2>Nosso cardápio</h2>
-        <div id="cardapios">
-            <ul></ul>
-        </div>
+            <p> Devido a pandemia e algumas descobertas em sua vida, o professor está largando a vida de
+                <strong>Desenvolvedor</strong> e vai ser <strong>Dono de Pizzaria</strong>, com isso ele precisa de um
+                sistema para que o usuário consiga fazer pedidos de forma simples e intuitiva sem sair de sua casa.
+            </p>
 
-        <button onclick="chamarPagina1()">Faça seu pedido agora</button>
-
-        <!-- Primeira página -->
-
-        <div id="pagina1">
-
-            <div class="itensPizza">
-                <p>Escolha sua pizza:</p>
-                <select name="tamanho" id="tamanhosPizzas">
-                    <option value="pequena">Pequena</option>
-                    <option value="média">Média</option>
-                    <option value="gigante">Gigante</option>
-                    <option value="família">Família</option>
-                </select>
+            <h2>Nosso cardápio</h2>
+            <div id="cardapios">
+                <ul></ul>
             </div>
 
-            <div class="itensPizza">
-                Escolha o sabor:
-                <select name="tamanho" id="saboresPizzas">
-                    <option value="calabresa">calabresa</option>
-                    <option value="4 queijos">4 queijos</option>
-                    <option value="frango com catupiry">frango com catupiry</option>
-                    <option value="portuguesa">portuguesa</option>
-                    <option value="camarão">camarão</option>
-                    <option value="carne seca">carne seca</option>
-                    <option value="lombo canadense">lombo canadense</option>
-                    <option value="X- fritas">X- fritas</option>
-                </select>
+            <button onclick="chamarPagina1()">Faça seu pedido agora</button>
+
+            <!-- Primeira página -->
+
+            <div id="pagina1">
+
+                <div class="itensPizza">
+                    <p>Escolha sua pizza:</p>
+                    <select name="tamanho" id="tamanhosPizzas">
+                        <option value="pequena">Pequena</option>
+                        <option value="média">Média</option>
+                        <option value="gigante">Gigante</option>
+                        <option value="família">Família</option>
+                    </select>
+                </div>
+
+                <div class="itensPizza">
+                    Escolha o sabor:
+                    <select name="tamanho" id="saboresPizzas">
+                        <option value="calabresa">calabresa</option>
+                        <option value="4 queijos">4 queijos</option>
+                        <option value="frango com catupiry">frango com catupiry</option>
+                        <option value="portuguesa">portuguesa</option>
+                        <option value="camarão">camarão</option>
+                        <option value="carne seca">carne seca</option>
+                        <option value="lombo canadense">lombo canadense</option>
+                        <option value="X- fritas">X- fritas</option>
+                    </select>
+                </div>
+
+                <div class="itensPizza">
+                    Escolha sua borda:
+                    <select name="tamanho" id="bordasPizzas">
+                        <option value="sem borda">Sem borda</option>
+                        <option value="gorgonzola">Gorgonzola</option>
+                        <option value="provolone">Provolone</option>
+                        <option value="catupiry">Catupiry</option>
+                        <option value="cheddar">Cheddar</option>
+                    </select>
+                </div>
+                <div class="itensPizza">
+                    Escolha sua bebida:
+                    <select name="tamanho" id="bebidas">
+                        <option value="Coca-Cola">Coca-Cola</option>
+                        <option value="Fanta">Fanta</option>
+                        <option value="Guaraná Antarctica">Guaraná Antarctica</option>
+                        <option value="H2O">H2O</option>
+                        <option value="Del Valle">Del Valle</option>
+                    </select>
+                </div>
+                <div class="itensPizza">
+                    Escolha o modo de entrega:
+                    <select name="tamanho" id="tiposEntregas">
+                        <option value="retirada no balcão">Retirada no balcão</option>
+                        <option value="delivery">Delivery</option>
+                    </select>
+                </div>
+                <div class="itensPizza">
+                    Escolha a forma de pagamento:
+                    <select name="tamanho" id="tiposPagamentos">
+                        <option value="cartão de crédito">Cartão de crédito</option>
+                        <option value="cartão de débito">Cartão de débito</option>
+                        <option value="pix">Pix</option>
+                        <option value="pic pay">Pic Pay</option>
+                        <option value="dinheiro">Dinheiro</option>
+                    </select>
+                </div>
+
+                <button onclick="meuPedido()">Fazer pedido</button>
             </div>
 
-            <div class="itensPizza">
-                Escolha sua borda:
-                <select name="tamanho" id="bordasPizzas">
-                    <option value="sem borda">Sem borda</option>
-                    <option value="gorgonzola">Gorgonzola</option>
-                    <option value="provolone">Provolone</option>
-                    <option value="catupiry">Catupiry</option>
-                    <option value="cheddar">Cheddar</option>
-                </select>
-            </div>
-            <div class="itensPizza">
-                Escolha sua bebida:
-                <select name="tamanho" id="bebidas">
-                    <option value="Coca-Cola">Coca-Cola</option>
-                    <option value="Fanta">Fanta</option>
-                    <option value="Guaraná Antarctica">Guaraná Antarctica</option>
-                    <option value="H2O">H2O</option>
-                    <option value="Del Valle">Del Valle</option>
-                </select>
-            </div>
-            <div class="itensPizza">
-                Escolha o modo de entrega:
-                <select name="tamanho" id="tiposEntregas">
-                    <option value="retirada no balcão">Retirada no balcão</option>
-                    <option value="delivery">Delivery</option>
-                </select>
-            </div>
-            <div class="itensPizza">
-                Escolha a forma de pagamento:
-                <select name="tamanho" id="tiposPagamentos">
-                    <option value="cartão de crédito">Cartão de crédito</option>
-                    <option value="cartão de débito">Cartão de débito</option>
-                    <option value="pix">Pix</option>
-                    <option value="pic pay">Pic Pay</option>
-                    <option value="dinheiro">Dinheiro</option>
-                </select>
-            </div>
-
-            <button onclick="meuPedido()">Fazer pedido</button>
         </div>
 
         <!-- Página 2 -->
-        
+
         <div id="pagina2">
-            <p id="informacoesPedido"></p>
-            <p> Deseja confirmar o seu pedido? </p> 
-            <button style="display: none;" class="confirmacao" id="confirmar" onclick="sim()">Sim</button>
-            <button style="display: none;" class="confirmacao" id="negar" onclick="nao()">Não</button>
+            <div class="conteudo">
+                <p id="informacoesPedido"></p>
+                <p> Deseja confirmar o seu pedido? </p>
+                <button class="confirmacao" id="confirmar" onclick="sim()">Sim</button>
+                <button class="confirmacao" id="negar" onclick="nao()">Não</button>
+            </div>
         </div>
 
         <!-- Página 3 -->
 
-        <div id="pagina3">
-            <input type="text" name="nome do cliente" id="nome" placeholder="nome">
-            <input type="text" name="rua" id="rua" placeholder="rua">
-            <input type="text" name="número da casa" id="casa" placeholder="número da casa">
-            <input type="text" name="complemento" id="complemento" placeholder="complemento">
-            <input type="text" name="bairro" id="bairro" placeholder="bairro">
-            <input type="text" name="ponto de referência" id="referencia" placeholder="ponto de referência">
-            <input type="text" name="cep" id="cep" placeholder="CEP">
-            <input type="number" name="número de telefone" id="telefone" placeholder="número de telefone:">
+        <div class="pagina3">
+            <div class="conteudo">
+                <input type="text" name="nome do cliente" id="nome" placeholder="nome">
+                <input type="text" name="rua" id="rua" placeholder="rua">
+                <input type="text" name="número da casa" id="casa" placeholder="número da casa">
+                <input type="text" name="complemento" id="complemento" placeholder="complemento">
+                <input type="text" name="bairro" id="bairro" placeholder="bairro">
+                <input type="text" name="ponto de referência" id="referencia" placeholder="ponto de referência">
+                <input type="text" name="cep" id="cep" placeholder="CEP">
+                <input type="number" name="número de telefone" id="telefone" placeholder="número de telefone:">
 
-           <button onclick="enviar()">Enviar</button>
+                <button onclick="enviar()">Enviar</button>
+            </div>
         </div>
-        
+
     </div>
 
     <script src="./js/script.js"></script>
