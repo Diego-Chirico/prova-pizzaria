@@ -128,7 +128,9 @@ function meuPedido() {
 
     for(cont in tamanhoPizza){
         if(tamanhoDaPizza == tamanhoPizza[cont].tipo){
-            console.log(`O tipo de pizza que você escolheu é: ${tamanhoDaPizza}, o valor da pizza é igual a: ${(tamanhoPizza[cont].valor).toLocaleString('pt-br', {style: 'currency', currency:'BRL'})} esse é valor <<<<<`)
+            let paragrafoDaniel = document.getElementById('DanielSantos')
+
+            paragrafoDaniel.innerHTML = `O tipo de pizza que você escolheu é: ${tamanhoDaPizza}, o valor da pizza é igual a: ${(tamanhoPizza[cont].valor).toLocaleString('pt-br', {style: 'currency', currency:'BRL'})} esse é valor <<<<<`
         }
         
     }

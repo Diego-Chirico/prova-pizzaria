@@ -30,3 +30,19 @@ body {
     font-size: 1.6em;
     font-family: 'Lobster', cursive;
 }
+
+
+/* Select */
+
+select {
+    appearance: none;
+    background-color: transparent;
+    background-position: 218px center;
+    width: 150px;
+    height:30px;
+}
+
+select option {
+    background-color: #B4A3C5;
+}
+
