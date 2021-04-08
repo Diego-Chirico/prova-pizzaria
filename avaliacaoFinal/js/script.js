@@ -2,22 +2,22 @@ const tamanhoPizza = [
     {
         tipo: "pequena",
         tamanho: 20,
-        valor: 25.00
+        valor: 25
     },
     {
         tipo: "media",
         tamanho: 25,
-        valor: 30.00
+        valor: 30
     },
     {
         tipo: "gigante",
         tamanho: 35,
-        valor: 40.00
+        valor: 40
     },
     {
         tipo: "familia",
         tamanho: 40,
-        valor: 45.00
+        valor: 45
     }
 ]
 
@@ -122,7 +122,16 @@ const formaDePagamento = ["Dinheiro", "Cartão (crédito ou débito)", "Pix", "P
 function meuPedido() {
    
 
-    console.log("oi")
+    let tamanhoDaPizza = document.getElementById('tamanhosPizzas').value
+
+    console.log(tamanhoDaPizza)
+
+    for(cont in tamanhoPizza){
+        if(tamanhoDaPizza == tamanhoPizza[cont].tipo){
+            console.log(`O tipo de pizza que você escolheu é: ${tamanhoDaPizza}, o valor da pizza é igual a: ${(tamanhoPizza[cont].valor).toLocaleString('pt-br', {style: 'currency', currency:'BRL'})} esse é valor <<<<<`)
+        }
+        
+    }
 
 }
 
