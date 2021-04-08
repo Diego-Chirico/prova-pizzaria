@@ -15,8 +15,8 @@
 }
 
 body {
-    background-image: url(../img/fundo.jpg);
-    background-size: cover;
+    background-image: url(../img/fundo1.jpg);
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
@@ -73,10 +73,12 @@ select option {
 
 #pagina2 {
     display: flex;
+    background-image: url(../img/fundo2.jpg);
 }
 
 /* pagina 3 */
 
 #pagina3 {
     display: flex;
+    background-image: url(../img/fundo3.jpg);
 }
