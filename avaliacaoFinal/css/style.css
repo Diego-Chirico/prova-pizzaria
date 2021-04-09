@@ -95,7 +95,11 @@ select option {
   justify-content: space-around;
   align-items: center;
   transform: translateX(-10%);
-  width: 80%;
+  width: 65%;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px black;
+  padding: 20px 0px 20px;
 
 }
 
@@ -147,7 +151,7 @@ select option {
 /* pagina 2 */
 
 #pagina2 {
-  display: block;
+  display: none;
   width: 100%;
   min-height: 100vh;
   background-image: url(../img/fundo2.jpg);
@@ -161,6 +165,7 @@ select option {
   transform: translateX(-30%);
   border: 1px solid black;
   border-radius: 10px;
+  box-shadow: 2px 2px 10px black;
 }
 
 #informacoesPedido {
@@ -171,7 +176,7 @@ select option {
 /* pagina 3 */
 
 #pagina3 {
-  display: none;
+  display: block;
   background-image: url(../img/fundo3.jpg);
 }
 
