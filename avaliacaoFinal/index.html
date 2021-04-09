@@ -37,7 +37,14 @@
                 </select>
             </div>
 
-            <div class="itensPizza1">
+
+            <div class="itensPizza">
+                Quantos sabores deseja?
+                <button style="max-width: 70px;" onclick="quant1()" >1 sabor</button>
+                <button style="max-width: 70px;" onclick="quant2()">2 sabores</button>
+            </div>
+
+            <div id="sabor1" class="itensPizza">
                 Escolha o sabor:
                 <select name="tamanho" id="saboresPizzas1">
                     <option value="calabresa">calabresa</option>
@@ -51,7 +58,7 @@
                 </select>
             </div>
 
-            <div class="itensPizza2">
+            <div id="sabor2" class="itensPizza">
                 Escolha o sabor:
                 <select name="tamanho" id="saboresPizzas2">
                     <option value="calabresa">calabresa</option>
@@ -64,6 +71,8 @@
                     <option value="X- fritas">X- fritas</option>
                 </select>
             </div>
+
+            <p id="saboresIguais"></p>
 
             <div class="itensPizza">
                 Escolha sua borda:
@@ -106,14 +115,7 @@
             <button onclick="meuPedido()">Fazer pedido</button>
         </div>
 
-
-
-
-        <button onclick="chamarPagina1()">Faça seu pedido agora</button>
-
         <!-- Primeira página -->
-
-
 
     </div>
 
@@ -121,9 +123,18 @@
 
     <div id="pagina2">
 
+        <div class="conteudo">
+            <p id="informacoesPedido"></p>
+            <p> Deseja confirmar o seu pedido? </p>
+            <button class="confirmacao" id="confirmar" onclick="sim()">Sim</button>
+            <button class="confirmacao" id="negar" onclick="nao()">Não</button>
+        </div>
 
+    </div>
 
+    <!-- Página 3 -->
 
+    <div id="pagina3">
 
         <div class="conteudo">
             <input type="text" name="nome do cliente" id="nome" placeholder="nome">
@@ -136,24 +147,7 @@
             <input type="number" name="número de telefone" id="telefone" placeholder="número de telefone:">
 
             <button onclick="enviar()">Enviar</button>
-
-
         </div>
-
-    </div>
-
-    <!-- Página 3 -->
-
-    <div id="pagina3">
-
-
-        <div class="conteudo">
-            <p id="informacoesPedido"></p>
-            <p> Deseja confirmar o seu pedido? </p>
-            <button class="confirmacao" id="confirmar" onclick="sim()">Sim</button>
-            <button class="confirmacao" id="negar" onclick="nao()">Não</button>
-        </div>
-    </div>
 
     </div>
 

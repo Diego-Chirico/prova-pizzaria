@@ -2,79 +2,81 @@
 
 /* fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
 /* font-family: 'Lobster', cursive; */
 /* font-family: 'Noto Sans JP', sans-serif; */
 
 /* resetar página */
 
 * {
-    margin: 0;
-    padding: 0px;
-    font-size: 14px;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 500;
+  margin: 0;
+  padding: 0px;
+  font-size: 14px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 500;
 }
 
 body {
-    background-image: url(../img/fundo1.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 /* Letras */
 h1 {
-    text-align: center;
-    font-size: 1.6em;
-    font-family: 'Lobster', cursive;
+  text-align: center;
+  font-size: 1.6em;
+  font-family: "Lobster", cursive;
 }
 
 /* Select */
 
 select {
-    appearance: none;
-    background-color: transparent;
-    background-position: 218px center;
-    width: 150px;
-    height:30px;
-    border-radius: 3px;
+  appearance: none;
+  background-color: transparent;
+  background-position: 218px center;
+  width: 150px;
+  height: 30px;
+  border-radius: 3px;
 }
 
 select option {
-    background-color: #B4A3C5;
+  background-color: #b4a3c5;
 }
 
 .conteudo {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 /* pagina 1 */
 
 #pagina1 {
-    min-height: 100vh;
+  min-height: 100vh;
+  background-image: url(../img/fundo1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .itensPizza {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 50%;
-    flex-direction: column;
-    text-align: center;
+  display: flex;
+  min-width: 50%;
+  flex-direction: column;
+  margin-left: 100px;
+}
+
+#sabor1, #sabor2 {
+  display: none;
 }
 
 /* pagina 2 */
 
 #pagina2 {
-    display: flex;
-    width: 100%;
-    background-image: url(../img/fundo2.jpg);
+  display: none;
+  width: 100%;
+  background-image: url(../img/fundo2.jpg);
 }
 
 /* pagina 3 */
 
 #pagina3 {
-    display: flex;
-    background-image: url(../img/fundo3.jpg);
+  display: none;
+  background-image: url(../img/fundo3.jpg);
 }

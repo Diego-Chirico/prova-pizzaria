@@ -54,11 +54,33 @@ const formaPagamento = [
 
 let pedido = {};
 
-function chamarPagina1() {
-    document.getElementById('pagina1').style.display = "flex"
+
+function quant1(){
+
+
+    Object.assign(pedido, {quantidadeSabor: 1})
+
+    if(pedido.quantidadeSabor == 1){
+        document.getElementById('sabor1').style.display = "flex"
+        document.getElementById('sabor2').style.display = "none"
+    }
+
+
+}
+
+function quant2(){
+
+
+    Object.assign(pedido, {quantidadeSabor: 2})
+
+    if(pedido.quantidadeSabor == 2){
+        document.getElementById('sabor1').style.display = "flex"
+        document.getElementById('sabor2').style.display = "flex"
+    }
 }
 
 function meuPedido() {
+    document.getElementById('saboresIguais').innerHTML = ""
 
     //tamanhoPizza = array 
     //tamanhosPizzas = id select
@@ -66,19 +88,26 @@ function meuPedido() {
 
     saberTamanhoPizza()
 
-    saberTipoSabor1()
+    if(pedido.quantidadeSabor == 1) {
+        saberTipoSabor1()
+    } else {
+        saberTipoSabor1()
+        saberTipoSabor2()
+    }
 
-    saberTipoSabor2()   
+    if (pedido.sabor1 != pedido.sabor2) {
+        saberTipoBorda()
 
-    saberTipoBorda()
+        saberTipoBebida()
 
-    saberTipoBebida()
+        saberTipoEntrega()
 
-    saberTipoEntrega()
+        saberTipoPagamento()
 
-    saberTipoPagamento()
-
-    calcular()
+        calcular()
+    } else {
+        document.getElementById('saboresIguais').innerHTML = `<p style="color: red;"> Por favor, selecione sabores diferentes.</p>`
+    }
 
     console.log(pedido)
 }
@@ -145,19 +174,30 @@ function saberTipoPagamento() {
             console.log(pedido)
         }
     }
-    
-
 }
 
 function calcular() {
 
-    document.getElementById('pagina1').style.display = "none"
-
     let informacoesPedido = document.getElementById('informacoesPedido')
 
-    Object.assign(pedido, {valorTotal: pedido.valorTamanho + pedido.valorBorda + pedido.valorBebida + pedido.valorEntrega}) 
+    Object.assign(pedido, { valorTotal: pedido.valorTamanho + pedido.valorBorda + pedido.valorBebida + pedido.valorEntrega })
 
-    informacoesPedido.innerHTML =
+    if (pedido.quantidadeSabor == 1){
+        informacoesPedido.innerHTML =
+        `   
+        <p>Confira abaixo as informações do seu pedido: </p>
+        <p>Tamanho:  ${pedido.tipoTamanho} </p>
+        <p>Sabor1:  ${pedido.sabor1} </p>
+        <p>Borda:  ${pedido.borda} </p>
+        <p>Bebida: ${pedido.tipoBebida} </p>
+        <p>Tipo de entrega: ${pedido.entrega} </p>
+        <p>Forma de pagamento: ${pedido.tipoPagamento} </p>
+        <p>O valor total do seu pedido é igual à: ${pedido.valorTotal.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}<p>
+    `
+
+    } else {
+
+        informacoesPedido.innerHTML =
         `   
         <p>Confira abaixo as informações do seu pedido: </p>
         <p>Tamanho:  ${pedido.tipoTamanho} </p>
@@ -167,10 +207,17 @@ function calcular() {
         <p>Bebida: ${pedido.tipoBebida} </p>
         <p>Tipo de entrega: ${pedido.entrega} </p>
         <p>Forma de pagamento: ${pedido.tipoPagamento} </p>
-        <p>O valor total do seu pedido é igual à: ${pedido.valorTotal.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}<p>`
+        <p>O valor total do seu pedido é igual à: ${pedido.valorTotal.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}<p>
+    `
 
+        
+    }
 
+    
+    document.getElementById('pagina2').style.display = "flex"
 }
+
+
 function nao() {
 
     let todos = document.getElementsByClassName('escondido')
@@ -188,17 +235,10 @@ function nao() {
 
 function sim() {
 
-     troco()
-}
 
-function troco() {
-
-    if(pedido.tipoPagamento == "dinheiro" ){
-
-        
-    }
 
 }
+
 
 function enviar() {
 
