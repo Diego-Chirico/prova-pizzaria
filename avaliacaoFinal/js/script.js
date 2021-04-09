@@ -282,7 +282,7 @@ function enviar() {
     pedidoFinal.innerHTML = 
     `<div id="pedidoFinal-pg3">
     <p> Ebaa! Seu pedido nº ${pedido.id} foi realizado com sucesso.</p>
-    <p> Agora vamos iniciar o preparo do seu pedido e jajá você terá uma pizza quentinha em suas mãos.</p>
+    <p> Agora vamos iniciar o preparo do seu pedido e já já você terá uma pizza quentinha em suas mãos.</p>
     <p> O tempo estimado para entrega é de até 90 minutos. </p>
     <p> Agradecemos a sua preferência, <br>
     Sr(ª)  ${pedido.nome}. </p> 
