@@ -208,8 +208,10 @@ function calcular() {
     if (pedido.quantidadeSabor == 1) {
         informacoesPedido.innerHTML =
             `   
+        <p> O número do seu pedido é:</p>
+        <h1 style="font-size: 30px; margin-top: -20px;">nº ${pedido.id}</h1>
         <p>Confira abaixo as informações do seu pedido : </p>
-        <p> O número do seu pedido é: ${pedido.id}</p>
+
         <p>Tamanho:  ${pedido.tipoTamanho} </p>
         <p>Sabor1:  ${pedido.sabor1} </p>
         <p>Borda:  ${pedido.borda} </p>
@@ -224,9 +226,11 @@ function calcular() {
     } else {
 
         informacoesPedido.innerHTML =
-            `   
+            `  
+        <p> O número do seu pedido é:</p>
+        <h1 style="font-size: 30px; margin-top: -20px;">nº ${pedido.id}</h1>
         <p>Confira abaixo as informações do seu pedido: </p>
-        <p> O número do seu pedido é: ${pedido.id}</p>
+        
         <p>Tamanho:  ${pedido.tipoTamanho} </p>
         <p>Sabor1:  ${pedido.sabor1} </p>
         <p>Sabor2:  ${pedido.sabor2} </p>
@@ -281,7 +285,9 @@ function enviar() {
 
     pedidoFinal.innerHTML = 
     `<div id="pedidoFinal-pg3">
-    <p> Ebaa! Seu pedido nº ${pedido.id} foi realizado com sucesso.</p>
+    <p> Ebaa! Seu pedido</p>
+    <h1 style="font-size: 30px; margin-top: -20px;">nº ${pedido.id}</h1>
+    <p>foi realizado com sucesso.</p>
     <p> Agora vamos iniciar o preparo do seu pedido e já já você terá uma pizza quentinha em suas mãos.</p>
     <p> O tempo estimado para entrega é de até 90 minutos. </p>
     <p> Agradecemos a sua preferência, <br>
