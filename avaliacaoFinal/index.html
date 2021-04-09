@@ -20,13 +20,15 @@
                 sistema para que o usuário consiga fazer pedidos de forma simples e intuitiva sem sair de sua casa.
             </p>
 
-            <h2>Nosso cardápio</h2>
-
-            <div id="cardapios">
-                <a href="cardapio.html" target="_blank">Nosso cardápio</a>
-            </div>
 
             <div id="conteudo">
+                <div st id="cardapios">
+                    <a href="cardapio.html" target="_blank">
+                        <h2>Nosso cardápio</h2>
+                    </a>
+                </div>
+
+
 
                 <div class="itensPizza">
                     Escolha sua pizza:
@@ -41,8 +43,8 @@
 
                 <div class="itensPizza">
                     Quantos sabores deseja?
-                    <button style="max-width: 70px;" onclick="quant1()">1 sabor</button>
-                    <button style="max-width: 70px;" onclick="quant2()">2 sabores</button>
+                    <button id="btn" style="max-width: 70px;" onclick="quant1()">1 sabor</button>
+                    <button id="btn" style="max-width: 70px;" onclick="quant2()">2 sabores</button>
                 </div>
 
                 <div id="sabor1" class="itensPizza">
@@ -112,8 +114,9 @@
                         <option value="dinheiro">Dinheiro</option>
                     </select>
                 </div>
-
-                <button onclick="meuPedido()">Fazer pedido</button>
+                <div id="btn-pedido">
+                    <button onclick="meuPedido()">Fazer pedido</button>
+                </div>
             </div>
 
             <!-- Primeira página -->
