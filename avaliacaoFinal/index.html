@@ -15,7 +15,8 @@
         <div class="container">
             <h1>Pizzaria do Professor DEV</h1>
 
-            <p> Devido a pandemia e algumas descobertas em sua vida, o professor está largando a vida de
+            <p style="text-indent: 50px;"> Devido a pandemia e algumas descobertas em sua vida, o professor está
+                largando a vida de
                 <strong>Desenvolvedor</strong> e vai ser <strong>Dono de Pizzaria</strong>, com isso ele precisa de um
                 sistema para que o usuário consiga fazer pedidos de forma simples e intuitiva sem sair de sua casa.
             </p>
@@ -43,8 +44,10 @@
 
                 <div class="itensPizza">
                     Quantos sabores deseja?
-                    <button id="btn" style="max-width: 70px;" onclick="quant1()">1 sabor</button>
-                    <button id="btn" style="max-width: 70px;" onclick="quant2()">2 sabores</button>
+                    <div style="display: flex;">
+                        <button style="margin-right: 10px" class="btn-saborpedido" style="max-width: 70px;" onclick="quant1()">1 sabor</button>
+                        <button class="btn-saborpedido" style="max-width: 70px;" onclick="quant2()">2 sabores</button>
+                    </div>
                 </div>
 
                 <div id="sabor1" class="itensPizza">
@@ -75,7 +78,7 @@
                     </select>
                 </div>
 
-                <p id="saboresIguais"></p>
+                <h3 id="saboresIguais"></h3>
 
                 <div class="itensPizza">
                     Escolha sua borda:
@@ -115,7 +118,7 @@
                     </select>
                 </div>
                 <div id="btn-pedido">
-                    <button onclick="meuPedido()">Fazer pedido</button>
+                    <button class="btn-saborpedido" onclick="meuPedido()">Fazer pedido</button>
                 </div>
             </div>
 
@@ -127,11 +130,11 @@
 
     <div id="pagina2">
 
-        <div class="conteudo">
+        <div id="conteudo-pg2">
             <p id="informacoesPedido"></p>
-            <p> Deseja confirmar o seu pedido? </p>
-            <button class="confirmacao" id="confirmar" onclick="sim()">Sim</button>
-            <button class="confirmacao" id="negar" onclick="nao()">Não</button>
+            
+            <button style="margin: 0px 40px 20px 0px;" class="confirmacao btn-saborpedido" id="confirmar" onclick="sim()">Sim</button>
+            <button class="confirmacao btn-saborpedido" id="negar" onclick="nao()">Não</button>
         </div>
 
     </div>

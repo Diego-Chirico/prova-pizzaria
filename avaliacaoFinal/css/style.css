@@ -14,7 +14,6 @@
   font-size: 14px;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 500;
-  text-align: justify;
 }
 
 body {
@@ -47,7 +46,6 @@ h2:hover {
 
 p {
   font-size: 1.2em;
-  text-indent: 50px;
   margin-bottom: 20px;
 }
 
@@ -97,6 +95,7 @@ select option {
   justify-content: space-around;
   align-items: center;
   transform: translateX(-10%);
+  width: 80%;
 
 }
 
@@ -104,6 +103,7 @@ select option {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-bottom: 10px;
 }
 
 .itensPizza {
@@ -121,8 +121,11 @@ select option {
 }
 
 #saboresIguais {
+  display: none;
   font-size: 1.0em;
-  max-width: 50%;
+  min-width: 50%;
+  transform: translateX(15%);
+  text-align: center;
 }
 
 #btn-pedido {
@@ -132,18 +135,38 @@ select option {
 }
 
 
-#btn {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+.btn-saborpedido {
+  min-width: 100px;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 4px;
+  border: 1px solid black;
+  color: black;
 }
 /* pagina 2 */
 
 #pagina2 {
-  display: none;
+  display: block;
   width: 100%;
+  min-height: 100vh;
   background-image: url(../img/fundo2.jpg);
 }
+
+#conteudo-pg2 {
+  
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  transform: translateX(-30%);
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+#informacoesPedido {
+  margin-top: 20px;
+}
+
 
 /* pagina 3 */
 

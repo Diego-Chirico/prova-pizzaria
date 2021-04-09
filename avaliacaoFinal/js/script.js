@@ -215,6 +215,7 @@ function calcular() {
         <p>Tipo de entrega: ${pedido.entrega} </p>
         <p>Forma de pagamento: ${pedido.tipoPagamento} </p>
         <p>O valor total do seu pedido é igual à: ${pedido.valorTotal.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}<p>
+        <p> Deseja confirmar o seu pedido? </p>
         
     `
 
@@ -223,6 +224,7 @@ function calcular() {
         informacoesPedido.innerHTML =
             `   
         <p>Confira abaixo as informações do seu pedido: </p>
+        <p> O número do seu pedido é: ${pedido.id}</p>
         <p>Tamanho:  ${pedido.tipoTamanho} </p>
         <p>Sabor1:  ${pedido.sabor1} </p>
         <p>Sabor2:  ${pedido.sabor2} </p>
@@ -231,6 +233,7 @@ function calcular() {
         <p>Tipo de entrega: ${pedido.entrega} </p>
         <p>Forma de pagamento: ${pedido.tipoPagamento} </p>
         <p>O valor total do seu pedido é igual à: ${pedido.valorTotal.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}<p>
+        <p> Deseja confirmar o seu pedido? </p>
     `
     }
 
