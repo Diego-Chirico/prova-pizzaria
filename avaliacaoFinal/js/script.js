@@ -292,6 +292,10 @@ function enviar() {
     </div>
     `
 
+    document.getElementById('conteudo-pg3').style.display = "none"
+    document.getElementById('btn-enviar').style.display = "none"
+    document.getElementById('text-pg3').style.display = "none"
+
     
 }
 
