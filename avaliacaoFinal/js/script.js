@@ -55,12 +55,12 @@ const formaPagamento = [
 let pedido = {};
 
 
-function quant1(){
+function quant1() {
 
 
-    Object.assign(pedido, {quantidadeSabor: 1})
+    Object.assign(pedido, { quantidadeSabor: 1 })
 
-    if(pedido.quantidadeSabor == 1){
+    if (pedido.quantidadeSabor == 1) {
         document.getElementById('sabor1').style.display = "flex"
         document.getElementById('sabor2').style.display = "none"
     }
@@ -68,12 +68,12 @@ function quant1(){
 
 }
 
-function quant2(){
+function quant2() {
 
 
-    Object.assign(pedido, {quantidadeSabor: 2})
+    Object.assign(pedido, { quantidadeSabor: 2 })
 
-    if(pedido.quantidadeSabor == 2){
+    if (pedido.quantidadeSabor == 2) {
         document.getElementById('sabor1').style.display = "flex"
         document.getElementById('sabor2').style.display = "flex"
     }
@@ -88,7 +88,7 @@ function meuPedido() {
 
     saberTamanhoPizza()
 
-    if(pedido.quantidadeSabor == 1) {
+    if (pedido.quantidadeSabor == 1) {
         saberTipoSabor1()
     } else {
         saberTipoSabor1()
@@ -105,6 +105,15 @@ function meuPedido() {
         saberTipoPagamento()
 
         calcular()
+
+        if (pedido.tipoPagamento == "dinheiro"){
+            Object.assign(pedido, {troco: parseInt(prompt(`Você precisa de troco para qual valor?`))})
+            while(pedido.troco < pedido.valorTotal){
+                Object.assign(pedido, {troco: parseInt(prompt(`Você precisa de troco para qual valor?`))})
+            }
+        }
+
+        
     } else {
         document.getElementById('saboresIguais').innerHTML = `<p style="color: red;"> Por favor, selecione sabores diferentes.</p>`
     }
@@ -182,9 +191,9 @@ function calcular() {
 
     Object.assign(pedido, { valorTotal: pedido.valorTamanho + pedido.valorBorda + pedido.valorBebida + pedido.valorEntrega })
 
-    if (pedido.quantidadeSabor == 1){
+    if (pedido.quantidadeSabor == 1) {
         informacoesPedido.innerHTML =
-        `   
+            `   
         <p>Confira abaixo as informações do seu pedido: </p>
         <p>Tamanho:  ${pedido.tipoTamanho} </p>
         <p>Sabor1:  ${pedido.sabor1} </p>
@@ -198,7 +207,7 @@ function calcular() {
     } else {
 
         informacoesPedido.innerHTML =
-        `   
+            `   
         <p>Confira abaixo as informações do seu pedido: </p>
         <p>Tamanho:  ${pedido.tipoTamanho} </p>
         <p>Sabor1:  ${pedido.sabor1} </p>
@@ -209,11 +218,9 @@ function calcular() {
         <p>Forma de pagamento: ${pedido.tipoPagamento} </p>
         <p>O valor total do seu pedido é igual à: ${pedido.valorTotal.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}<p>
     `
-
-        
     }
 
-    
+
     document.getElementById('pagina2').style.display = "flex"
 }
 
