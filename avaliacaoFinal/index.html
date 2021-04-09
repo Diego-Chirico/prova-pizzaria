@@ -45,7 +45,8 @@
                 <div class="itensPizza">
                     Quantos sabores deseja?
                     <div style="display: flex;">
-                        <button style="margin-right: 10px" class="btn-saborpedido" style="max-width: 70px;" onclick="quant1()">1 sabor</button>
+                        <button style="margin-right: 10px" class="btn-saborpedido" style="max-width: 70px;"
+                            onclick="quant1()">1 sabor</button>
                         <button class="btn-saborpedido" style="max-width: 70px;" onclick="quant2()">2 sabores</button>
                     </div>
                 </div>
@@ -132,8 +133,9 @@
 
         <div id="conteudo-pg2">
             <p id="informacoesPedido"></p>
-            
-            <button style="margin: 0px 40px 20px 0px;" class="confirmacao btn-saborpedido" id="confirmar" onclick="sim()">Sim</button>
+
+            <button style="margin: 0px 40px 20px 0px;" class="confirmacao btn-saborpedido" id="confirmar"
+                onclick="sim()">Sim</button>
             <button class="confirmacao btn-saborpedido" id="negar" onclick="nao()">Não</button>
         </div>
 
@@ -143,22 +145,37 @@
 
     <div id="pagina3">
 
-        <div class="conteudo">
-            <input type="text" name="nome do cliente" id="nome" placeholder="nome">
-            <input type="text" name="rua" id="rua" placeholder="rua">
-            <input type="text" name="número da casa" id="casa" placeholder="número da casa">
-            <input type="text" name="complemento" id="complemento" placeholder="complemento">
-            <input type="text" name="bairro" id="bairro" placeholder="bairro">
-            <input type="text" name="ponto de referência" id="referencia" placeholder="ponto de referência">
-            <input type="text" name="cep" id="cep" placeholder="CEP">
-            <input type="number" name="número de telefone" id="telefone" placeholder="número de telefone:">
+        <div class="corpo-pg3">
+            <h4>Por favor, digite seus dados</h4>
+        </div>
+        <div id="conteudo-pg3">
+            <div id="cont1">
+                <div class="cont-input1"><input type="text" name="nome do cliente" id="nome" placeholder="nome"></div>
+                <div class="cont-input1"><input type="text" name="rua" id="rua" placeholder="rua"></div>
+                <div class="cont-input1"><input type="number" name="número da casa" id="casa"
+                        placeholder="número da casa"></div>
+                <div class="cont-input1"><input type="text" name="complemento" id="complemento"
+                        placeholder="complemento"></div>
+            </div>
 
-            <button onclick="enviar()">Enviar</button>
+            <div id="cont2">
+                <div class="cont-input2"><input type="text" name="bairro" id="bairro" placeholder="bairro"></div>
+                <div class="cont-input2"><input type="text" name="ponto de referência" id="referencia"
+                        placeholder="ponto de referência"></div>
+                <div class="cont-input2"><input type="number" name="cep" id="cep" placeholder="CEP"></div>
+                <div class="cont-input2"><input type="number" name="número de telefone" id="telefone"
+                        placeholder="número de telefone:"></div>
+            </div>
+
+
+        </div>
+
+        <div  style="display: flex;justify-content: flex-end;" class="corpo-pg3">
+            <button class="btn-saborpedido" style="margin: 50px 120px 0px 0px;" onclick="enviar()">Enviar</button>
 
 
             <p id="finalPedido"></p>
         </div>
-
     </div>
 
     <script src="./js/script.js"></script>

@@ -180,7 +180,73 @@ select option {
   background-image: url(../img/pagina3.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 100vh;
+}
+
+.corpo-pg3 {
+  width: 80%;
+  margin: auto;
+}
+
+h4 {
+  padding-top: 50px;
+  font-size: 1.6em;
+}
+
+#conteudo-pg3 {
+
+  display: flex;
+  flex-flow: row wrap;
+  margin: auto;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cont1 {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  align-items: flex-start;
+  margin-top: 40px;
+  padding: 0px 80px 0px 0px;
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 5px black;
+}
+
+.cont-input1 {
+  width: 40%;
+  justify-content: center;
+  margin: 20px 40px;
+}
+
+#cont2 {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  align-items: flex-end;
+  padding: 0px 100px 0px 0px;
+  margin-top: 40px;
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 5px black
+}
+
+.cont-input2 {
+  width: 40%;
+  justify-content: center;
+  margin: 20px 80px;
 }
 
 
-/*  */
+input {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-radius: 3px;
+}
+
