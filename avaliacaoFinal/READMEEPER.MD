@@ -6,10 +6,9 @@ EPER :
     1.3 sabores ( apenas 2 sabores por pizza); (só pode escolher 1 unidade por pedido.)  - ok
     1.4 bebidas; (só pode escolher 1 unidade por pedido.) ok
     1.5 tipo de entrega; ok
-        1.5.1 - se for retirada no balcão: nome e telefone; ok
-        1.5.2 - se for delivery: nome, celular, endereço(rua, número, complemento, bairro, ponto de referência), CEP - ok
+    1.6 Recolher dados do usuário(nome, celular, endereço(rua, número, complemento, bairro, ponto de referência), CEP) - ok
 
-2º Confirmação de pedido;
+2º Confirmação de pedido:
     2.1 Mostrar na tela o total do pedido. ok
     2.2 Criar botão sim ou não para confirmação do pedido. ok
     2.3 Em caso de confirmação, qual a forma de pagamento. (só pode escolher 1 forma de pagamento por pedido.) ok
