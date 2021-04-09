@@ -81,8 +81,11 @@ function quant2() {
 
 function meuPedido() {
     document.getElementById('saboresIguais').innerHTML = ""
-
-    //tamanhoPizza = array 
+    
+    Object.assign(pedido, {id: parseInt(Math.random() * 10000)})
+    
+    Object.assign(pedido, {id: parseInt(Math.random() * 10000)})//tamanhoPizza = array 
+   
     //tamanhosPizzas = id select
     // tamanhoDaPizza =  variável que recebe o select
 
@@ -106,14 +109,26 @@ function meuPedido() {
 
         calcular()
 
-        if (pedido.tipoPagamento == "dinheiro"){
-            Object.assign(pedido, {troco: parseInt(prompt(`Você precisa de troco para qual valor?`))})
-            while(pedido.troco < pedido.valorTotal){
-                Object.assign(pedido, {troco: parseInt(prompt(`Você precisa de troco para qual valor?`))})
+       
+
+
+
+        if (pedido.tipoPagamento == "dinheiro") {
+
+            let confirmacaoTroco = prompt(`O valor total do seu pedido é R$ ${pedido.valorTotal}. Você precisa de troco para esse valor?`)
+           
+            if (confirmacaoTroco == "sim") {
+
+                Object.assign(pedido, { troco: parseInt(prompt(`Você precisa de troco para qual valor?`)) })
+
+                while (pedido.troco < pedido.valorTotal) {
+                    Object.assign(pedido, { troco: parseInt(prompt(`Você precisa de troco para qual valor?`)) })
+                }
+
+
             }
         }
 
-        
     } else {
         document.getElementById('saboresIguais').innerHTML = `<p style="color: red;"> Por favor, selecione sabores diferentes.</p>`
     }
@@ -194,7 +209,8 @@ function calcular() {
     if (pedido.quantidadeSabor == 1) {
         informacoesPedido.innerHTML =
             `   
-        <p>Confira abaixo as informações do seu pedido: </p>
+        <p>Confira abaixo as informações do seu pedido : </p>
+        <p> O número do seu pedido é: ${pedido.id}</p>
         <p>Tamanho:  ${pedido.tipoTamanho} </p>
         <p>Sabor1:  ${pedido.sabor1} </p>
         <p>Borda:  ${pedido.borda} </p>
@@ -202,6 +218,7 @@ function calcular() {
         <p>Tipo de entrega: ${pedido.entrega} </p>
         <p>Forma de pagamento: ${pedido.tipoPagamento} </p>
         <p>O valor total do seu pedido é igual à: ${pedido.valorTotal.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}<p>
+        
     `
 
     } else {
@@ -264,3 +281,10 @@ function enviar() {
 
     Object.assign(pedido, dadosUsuario);
 }
+
+
+    
+
+    
+
+    
