@@ -16,6 +16,6 @@ EPER :
 
 3º Quando o pedido for finalizado, informar um número de pedido que será gerado randomicamente ao usuário. ok
 
-4º Informar o tempo estimado para entrega que é de até 90 minutos. 
+4º Informar o tempo estimado para entrega que é de até 90 minutos. ok 
 
-5º Ao final, mandar uma mensagem ao usuário: " Agradecemos sua preferência senhor(a) "nome"". 
+5º Ao final, mandar uma mensagem ao usuário: " Agradecemos sua preferência senhor(a) "nome"". ok
