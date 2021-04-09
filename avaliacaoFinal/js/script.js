@@ -255,22 +255,13 @@ function nao() {
 function sim() {
 
     document.getElementById('pagina3').style.display = "block"
-
-    let pedidoFinal = document.getElementById('finalPedido')
-
-    finalPedido.innerHTML = 
-    `
-    <p> Escreva aqui o que você quer que apareça na tela<<< </p>
-    <p> Ebaa! Seu pedido nº ${pedido.id} foi realizado com sucesso.</p>
-    <p> Agora vamos iniciar o preparo do seu pedido e jajá você terá uma pizza quentinha em suas mãos.</p>
-    <p> O tempo estimado para entrega é de até 90 minutos. </p>
-    <p> Agradecemos a sua preferência. Srº(ª)  ${pedido.nome}. </p> -- ---- aqui ta dando indefinido no nome ---- 
-    <p> Qualquer dúvida, entre em contato pelo nosso telefone (22) 2522-2858, pelo nosso Whataspp (22) 998292638 ou pelo nosso email "pizzariaprofessordev@pizzariaprofessordev.com.br". <p>
-    `
+    document.getElementById('pagina2').style.display = "none"
 }
 
 
 function enviar() {
+
+    let pedidoFinal = document.getElementById('finalPedido')
 
     let dadosUsuario = {
 
@@ -285,6 +276,23 @@ function enviar() {
     }
 
     Object.assign(pedido, dadosUsuario);
+
+    
+
+    pedidoFinal.innerHTML = 
+    `<div id="pedidoFinal-pg3">
+    <p> Ebaa! Seu pedido nº ${pedido.id} foi realizado com sucesso.</p>
+    <p> Agora vamos iniciar o preparo do seu pedido e jajá você terá uma pizza quentinha em suas mãos.</p>
+    <p> O tempo estimado para entrega é de até 90 minutos. </p>
+    <p> Agradecemos a sua preferência, <br>
+    Sr(ª)  ${pedido.nome}. </p> 
+    <p> Qualquer dúvida entre em contato: <br>
+    Telefone (22) 2522-2858 <br>
+    Whataspp (22) 998292638<p>
+    </div>
+    `
+
+    
 }
 
 
