@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+/* fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+/* font-family: 'Lobster', cursive; */
+/* font-family: 'Noto Sans JP', sans-serif; */
+
+/* resetar página */
+
+* {
+  margin: 0;
+  padding: 0px;
+  font-size: 14px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+body {
+    min-height: 150vh;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  font-family: "Lobster", cursive;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+h2 {
+  font-size: 1.6em;
+  font-family: "Lobster", cursive;
+  width: 150px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+table {
+    width: 40%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+#teste {
+    border: 12px solid black;
+    margin: 0px;
+    padding: 5px;
+}

@@ -141,6 +141,7 @@ select option {
 
 .btn-saborpedido {
   min-width: 100px;
+  max-width: 100px;
   text-align: center;
   background-color: transparent;
   border-radius: 5px;
