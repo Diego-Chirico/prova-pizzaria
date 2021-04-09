@@ -12,111 +12,112 @@
 
 <body>
     <div id="pagina1">
-        <h1>Pizzaria do Professor DEV</h1>
+        <div class="container">
+            <h1>Pizzaria do Professor DEV</h1>
 
-        <p> Devido a pandemia e algumas descobertas em sua vida, o professor está largando a vida de
-            <strong>Desenvolvedor</strong> e vai ser <strong>Dono de Pizzaria</strong>, com isso ele precisa de um
-            sistema para que o usuário consiga fazer pedidos de forma simples e intuitiva sem sair de sua casa.
-        </p>
+            <p> Devido a pandemia e algumas descobertas em sua vida, o professor está largando a vida de
+                <strong>Desenvolvedor</strong> e vai ser <strong>Dono de Pizzaria</strong>, com isso ele precisa de um
+                sistema para que o usuário consiga fazer pedidos de forma simples e intuitiva sem sair de sua casa.
+            </p>
 
-        <h2>Nosso cardápio</h2>
+            <h2>Nosso cardápio</h2>
 
-        <div id="cardapios">
-            <ul>aew</ul>
+            <div id="cardapios">
+                <a href="cardapio.html" target="_blank">Nosso cardápio</a>
+            </div>
+
+            <div id="conteudo">
+
+                <div class="itensPizza">
+                    Escolha sua pizza:
+                    <select name="tamanho" id="tamanhosPizzas">
+                        <option value="pequena">Pequena</option>
+                        <option value="média">Média</option>
+                        <option value="gigante">Gigante</option>
+                        <option value="família">Família</option>
+                    </select>
+                </div>
+
+
+                <div class="itensPizza">
+                    Quantos sabores deseja?
+                    <button style="max-width: 70px;" onclick="quant1()">1 sabor</button>
+                    <button style="max-width: 70px;" onclick="quant2()">2 sabores</button>
+                </div>
+
+                <div id="sabor1" class="itensPizza">
+                    Escolha o sabor:
+                    <select name="tamanho" id="saboresPizzas1">
+                        <option value="calabresa">calabresa</option>
+                        <option value="4 queijos">4 queijos</option>
+                        <option value="frango com catupiry">frango com catupiry</option>
+                        <option value="portuguesa">portuguesa</option>
+                        <option value="camarão">camarão</option>
+                        <option value="carne seca">carne seca</option>
+                        <option value="lombo canadense">lombo canadense</option>
+                        <option value="X- fritas">X- fritas</option>
+                    </select>
+                </div>
+
+                <div id="sabor2" class="itensPizza">
+                    Escolha o sabor:
+                    <select name="tamanho" id="saboresPizzas2">
+                        <option value="calabresa">calabresa</option>
+                        <option value="4 queijos">4 queijos</option>
+                        <option value="frango com catupiry">frango com catupiry</option>
+                        <option value="portuguesa">portuguesa</option>
+                        <option value="camarão">camarão</option>
+                        <option value="carne seca">carne seca</option>
+                        <option value="lombo canadense">lombo canadense</option>
+                        <option value="X- fritas">X- fritas</option>
+                    </select>
+                </div>
+
+                <p id="saboresIguais"></p>
+
+                <div class="itensPizza">
+                    Escolha sua borda:
+                    <select name="tamanho" id="bordasPizzas">
+                        <option value="sem borda">Sem borda</option>
+                        <option value="gorgonzola">Gorgonzola</option>
+                        <option value="provolone">Provolone</option>
+                        <option value="catupiry">Catupiry</option>
+                        <option value="cheddar">Cheddar</option>
+                    </select>
+                </div>
+                <div class="itensPizza">
+                    Escolha sua bebida:
+                    <select name="tamanho" id="bebidas">
+                        <option value="Coca-Cola">Coca-Cola</option>
+                        <option value="Fanta">Fanta</option>
+                        <option value="Guaraná Antarctica">Guaraná Antarctica</option>
+                        <option value="H2O">H2O</option>
+                        <option value="Del Valle">Del Valle</option>
+                    </select>
+                </div>
+                <div class="itensPizza">
+                    Escolha o modo de entrega:
+                    <select name="tamanho" id="tiposEntregas">
+                        <option value="retirada no balcão">Retirada no balcão</option>
+                        <option value="delivery">Delivery</option>
+                    </select>
+                </div>
+                <div class="itensPizza">
+                    Escolha a forma de pagamento:
+                    <select name="tamanho" id="tiposPagamentos">
+                        <option value="cartão de crédito">Cartão de crédito</option>
+                        <option value="cartão de débito">Cartão de débito</option>
+                        <option value="pix">Pix</option>
+                        <option value="pic pay">Pic Pay</option>
+                        <option value="dinheiro">Dinheiro</option>
+                    </select>
+                </div>
+
+                <button onclick="meuPedido()">Fazer pedido</button>
+            </div>
+
+            <!-- Primeira página -->
         </div>
-
-        <div id="conteudo">
-
-            <div class="itensPizza">
-                <p>Escolha sua pizza:</p>
-                <select name="tamanho" id="tamanhosPizzas">
-                    <option value="pequena">Pequena</option>
-                    <option value="média">Média</option>
-                    <option value="gigante">Gigante</option>
-                    <option value="família">Família</option>
-                </select>
-            </div>
-
-
-            <div class="itensPizza">
-                Quantos sabores deseja?
-                <button style="max-width: 70px;" onclick="quant1()" >1 sabor</button>
-                <button style="max-width: 70px;" onclick="quant2()">2 sabores</button>
-            </div>
-
-            <div id="sabor1" class="itensPizza">
-                Escolha o sabor:
-                <select name="tamanho" id="saboresPizzas1">
-                    <option value="calabresa">calabresa</option>
-                    <option value="4 queijos">4 queijos</option>
-                    <option value="frango com catupiry">frango com catupiry</option>
-                    <option value="portuguesa">portuguesa</option>
-                    <option value="camarão">camarão</option>
-                    <option value="carne seca">carne seca</option>
-                    <option value="lombo canadense">lombo canadense</option>
-                    <option value="X- fritas">X- fritas</option>
-                </select>
-            </div>
-
-            <div id="sabor2" class="itensPizza">
-                Escolha o sabor:
-                <select name="tamanho" id="saboresPizzas2">
-                    <option value="calabresa">calabresa</option>
-                    <option value="4 queijos">4 queijos</option>
-                    <option value="frango com catupiry">frango com catupiry</option>
-                    <option value="portuguesa">portuguesa</option>
-                    <option value="camarão">camarão</option>
-                    <option value="carne seca">carne seca</option>
-                    <option value="lombo canadense">lombo canadense</option>
-                    <option value="X- fritas">X- fritas</option>
-                </select>
-            </div>
-
-            <p id="saboresIguais"></p>
-
-            <div class="itensPizza">
-                Escolha sua borda:
-                <select name="tamanho" id="bordasPizzas">
-                    <option value="sem borda">Sem borda</option>
-                    <option value="gorgonzola">Gorgonzola</option>
-                    <option value="provolone">Provolone</option>
-                    <option value="catupiry">Catupiry</option>
-                    <option value="cheddar">Cheddar</option>
-                </select>
-            </div>
-            <div class="itensPizza">
-                Escolha sua bebida:
-                <select name="tamanho" id="bebidas">
-                    <option value="Coca-Cola">Coca-Cola</option>
-                    <option value="Fanta">Fanta</option>
-                    <option value="Guaraná Antarctica">Guaraná Antarctica</option>
-                    <option value="H2O">H2O</option>
-                    <option value="Del Valle">Del Valle</option>
-                </select>
-            </div>
-            <div class="itensPizza">
-                Escolha o modo de entrega:
-                <select name="tamanho" id="tiposEntregas">
-                    <option value="retirada no balcão">Retirada no balcão</option>
-                    <option value="delivery">Delivery</option>
-                </select>
-            </div>
-            <div class="itensPizza">
-                Escolha a forma de pagamento:
-                <select name="tamanho" id="tiposPagamentos">
-                    <option value="cartão de crédito">Cartão de crédito</option>
-                    <option value="cartão de débito">Cartão de débito</option>
-                    <option value="pix">Pix</option>
-                    <option value="pic pay">Pic Pay</option>
-                    <option value="dinheiro">Dinheiro</option>
-                </select>
-            </div>
-
-            <button onclick="meuPedido()">Fazer pedido</button>
-        </div>
-
-        <!-- Primeira página -->
-
     </div>
 
     <!-- Página 2 -->
