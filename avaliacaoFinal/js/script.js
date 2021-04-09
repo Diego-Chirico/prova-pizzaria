@@ -126,12 +126,12 @@ function meuPedido() {
 
             }
         }
-
+        document.getElementById('pagina1').style.display = "none"
     } else {
         document.getElementById('saboresIguais').style.display = "block"
         document.getElementById('saboresIguais').innerHTML = `<p style="color: red;"> Por favor, selecione sabores diferentes.</p>`
     }
-    document.getElementById('pagina1').style.display = "none"
+    
     
 }
 
