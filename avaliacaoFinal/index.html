@@ -145,6 +145,9 @@
 
     <div id="pagina3">
 
+        <div class="corpo-pg3">
+            <h4>Por favor, digite seus dados</h4>
+        </div>
         <div id="conteudo-pg3">
             <div id="cont1">
                 <div class="cont-input1"><input type="text" name="nome do cliente" id="nome" placeholder="nome"></div>
@@ -164,14 +167,15 @@
                         placeholder="número de telefone:"></div>
             </div>
 
-            
+
         </div>
 
-        <button onclick="enviar()">Enviar</button>
+        <div  style="display: flex;justify-content: flex-end;" class="corpo-pg3">
+            <button class="btn-saborpedido" style="margin: 50px 120x 0px 0px;" onclick="enviar()">Enviar</button>
 
 
             <p id="finalPedido"></p>
-
+        </div>
     </div>
 
     <script src="./js/script.js"></script>
