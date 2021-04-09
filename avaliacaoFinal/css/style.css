@@ -177,7 +177,9 @@ select option {
 
 #pagina3 {
   display: block;
-  background-image: url(../img/fundo3.jpg);
+  background-image: url(../img/pagina3.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 

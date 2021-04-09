@@ -244,12 +244,22 @@ function calcular() {
 
 function nao() {
 
-    delete pedido
+    document.getElementById('pagina2').style.display = "none"
+
+    pedido.quantidadeSabor = 1;
+
 }
 
 function sim() {
 
+    document.getElementById('pagina3').style.display = "block"
 
+    let pedidoFinal = document.getElementById('finalPedido')
+
+    finalPedido.innerHTML = 
+    `
+    <p> Escreva aqui o que você quer que apareça na tela<<< </p>
+    `
 
 }
 
