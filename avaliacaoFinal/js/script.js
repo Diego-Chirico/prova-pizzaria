@@ -262,7 +262,7 @@ function sim() {
     <p> Ebaa! Seu pedido nº ${pedido.id} foi realizado com sucesso.</p>
     <p> Agora vamos iniciar o preparo do seu pedido e jajá você terá uma pizza quentinha em suas mãos.</p>
     <p> O tempo estimado para entrega é de até 90 minutos. </p>
-    <p> Agradecemos a sua preferência, Srº(ª)  ${pedido.nome}. </p> 
+    <p> Agradecemos a sua preferência. Srº(ª)  ${pedido.nome}. </p> -- ---- aqui ta dando indefinido no nome ---- 
     <p> Qualquer dúvida, entre em contato pelo nosso telefone (22) 2522-2858, pelo nosso Whataspp (22) 998292638 ou pelo nosso email "pizzariaprofessordev@pizzariaprofessordev.com.br". <p>
 
 
