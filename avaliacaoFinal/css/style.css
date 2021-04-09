@@ -26,16 +26,34 @@ h1 {
   text-align: center;
   font-size: 3em;
   font-family: "Lobster", cursive;
+  margin-bottom: 20px;
 }
 
 h2 {
   font-size: 1.6em;
   font-family: "Lobster", cursive;
+  border: 1px solid #634b7a;
+  width: 150px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  color: #634b7a;
+}
+
+h2:hover {
+  color: black;
+  border: 1px solid black;
 }
 
 p {
   font-size: 1.2em;
   text-indent: 50px;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  
 }
 
 
@@ -73,14 +91,45 @@ select option {
   transform: translateX(-20%);
 }
 
+#conteudo {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  transform: translateX(-10%);
+
+}
+
+#cardapios {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .itensPizza {
   display: flex;
   min-width: 50%;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 30px;
 }
 
 #sabor1, #sabor2 {
   display: none;
+}
+
+#saboresIguais {
+  font-size: 1.0em;
+  max-width: 50%;
+}
+
+#btn-pedido {
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 /* pagina 2 */
@@ -97,3 +146,6 @@ select option {
   display: none;
   background-image: url(../img/fundo3.jpg);
 }
+
+
+/*  */

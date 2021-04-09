@@ -80,7 +80,7 @@ function quant2() {
 }
 
 function meuPedido() {
-    document.getElementById('saboresIguais').innerHTML = ""
+    document.getElementById('saboresIguais').style.display = "none"
     
     Object.assign(pedido, {id: parseInt(Math.random() * 10000)})
     
@@ -109,10 +109,6 @@ function meuPedido() {
 
         calcular()
 
-       
-
-
-
         if (pedido.tipoPagamento == "dinheiro") {
 
             let confirmacaoTroco = prompt(`O valor total do seu pedido é R$ ${pedido.valorTotal}. Você precisa de troco para esse valor?`)
@@ -130,6 +126,7 @@ function meuPedido() {
         }
 
     } else {
+        document.getElementById('saboresIguais').style.display = "block"
         document.getElementById('saboresIguais').innerHTML = `<p style="color: red;"> Por favor, selecione sabores diferentes.</p>`
     }
 
