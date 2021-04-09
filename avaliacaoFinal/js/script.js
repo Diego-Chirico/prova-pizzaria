@@ -244,17 +244,7 @@ function calcular() {
 
 function nao() {
 
-    let todos = document.getElementsByClassName('escondido')
-
-    for (i = 0; i < todos.length; i++) {
-        todos[i].style.display = 'block';
-    }
-
-    let botaoConfirmacao = document.getElementsByClassName('confirmacao')
-
-    for (i = 0; i < botaoConfirmacao.length; i++) {
-        botaoConfirmacao[i].style.display = 'none';
-    }
+    delete pedido
 }
 
 function sim() {
